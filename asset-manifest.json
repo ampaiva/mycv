@@ -1,0 +1,15 @@
+{
+  "files": {
+    "main.css": "/ampaiva/mycv/static/css/main.60e0bebf.css",
+    "main.js": "/ampaiva/mycv/static/js/main.99f76cc3.js",
+    "static/js/510.94445fac.chunk.js": "/ampaiva/mycv/static/js/510.94445fac.chunk.js",
+    "index.html": "/ampaiva/mycv/index.html",
+    "main.60e0bebf.css.map": "/ampaiva/mycv/static/css/main.60e0bebf.css.map",
+    "main.99f76cc3.js.map": "/ampaiva/mycv/static/js/main.99f76cc3.js.map",
+    "510.94445fac.chunk.js.map": "/ampaiva/mycv/static/js/510.94445fac.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.60e0bebf.css",
+    "static/js/main.99f76cc3.js"
+  ]
+}
