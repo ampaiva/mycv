@@ -1,57 +1,82 @@
-/* Division */
-.App .container div {
+.menu {
+  display: none;
+}
+
+.container {
   font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', 'sans serif';
+}
+
+.container .toppage td {
+  padding-top: 70px;
+  background-color: #f5bb1b;
+}
+
+.container .name {
+  text-align: center;
+  font-size: xx-large;
+}
+
+.container .role {
+  text-align: center;
+  font-size: medium;
+  color: #f5bb1b;
+}
+
+.container .contact table {
+  text-align: center;
   width: 100%;
+  border-bottom-style: solid;
+  border-top-style: solid;
 }
 
-td {
-  vertical-align: top;
-}
-
-
-/* Optional: Add some basic styling to the columns */
-.markdown {
+.container .body {
   padding: 10px;
   border-radius: 5px;
   column-count: 2;
   column-gap: 20px;
 }
 
-
-/* Heading */
-.x {
-  padding-top: 70px;
-  background-color: #f5bb1b;
+.container .body .section {
+  display: contents;
 }
 
-.App div h1 {
-  text-align: center;
-  padding-top: 70px;
-}
-
-.container .name td {
-  text-align: center;
-  font-size: 45px;
-}
-
-.container .role td {
-  text-align: center;
-  font-size: 19px;
-  font-weight: 400;
+.container .body .section .title {
   color: #f5bb1b;
+  font-size: large;
+  display: grid;
+  grid-template-columns: min-content min-content 1fr;
 }
 
-.contact table {
-  text-align: center;
-  width: 100%;
-  border-bottom-style:solid;
-  border-top-style:solid;
+.title {
+  margin-left: 10px;
+  flex-shrink: 1;
 }
 
+.filler {
+  margin-left: 10px;
+  font-size: large;
+  background-color: #0c62c4;
+}
 
-/* Heading */
-.menu {
-  display: none;
+.skill {
+  width: 100%; /* Adjust the width of the skill bar container */
+  height: 20px; /* Adjust the height of the skill bar */
+  background-color: #4d4d4d; /* Background color of the skill bar */
+  border-radius: 5px; /* Border radius for rounded corners */
+}
+
+.skill-bar {
+  height: 100%; /* Height of the progress bar */
+  width: 90%;
+  background-color: #f5bb1b; /* Color of the progress bar */
+  border-radius: 5px; /* Border radius for rounded corners */
+}
+
+.markdown {
+  padding: 10px;
+  border-radius: 5px;
+  column-count: 2;
+  column-gap: 20px;
 }
 
 .help {

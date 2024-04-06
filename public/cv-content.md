@@ -1,29 +1,3 @@
-
-### Objective (below Summary)
-### Summary
-Computer Science MSc in Software Engineering with a thesis on code clone. Extensive experience as
-an Electrical Engineer specializing in the development of mission-critical systems. Proficient in Python,
-Java, C, C++, and C#, having consistently contributed to the success of diverse projects.
-
-As an Engineering Manager, led multiple teams, overseeing an average of eight Engineers as direct
-reports. Key responsibilities included providing actionable feedback, nurturing their career growth, and
-actively participating in crucial technical project decisions. Achieved a perfect score of 100 out of 100 in
-the recent feedback survey, as reported anonymously by direct reports, encompassing eight key
-management aspects.
-
-Selected for international assignments leading development teams on projects in the United States,
-China, India, and Canada. These selections involved rigorous processes, incorporating practical tests
-and various technical interviews, showcasing competence and versatility.
-
-Remote work over seven years. Embracing a complete agile process through Scrum or Kanban has
-been integral to successful project management in a remote setting.
-
-### Skills
-Technical excellence • Stakeholder Management • Team building • Software Development •
-C++ • Software Engineering • Java • Linux • Embedded Systems • Agile Methodologies •
-Engineering Management • Python (Programming Language) • Django REST Framework •
-Portuguese (native) • English (fluent)
-
 ### Experience
 #### Engineering Manager
 #### Loadsmart
