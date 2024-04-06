@@ -1,7 +1,15 @@
 // src/CV.js
 
 import React, { useState, useEffect } from 'react';
-import { FaEnvelope } from "react-icons/fa";       // Font Awesome
+import { FaEnvelope, FaWhatsapp } from "react-icons/fa";
+import { MdOutlineTopic } from "react-icons/md";
+
+
+import { TbTargetArrow } from "react-icons/tb";
+import { GiSkills } from "react-icons/gi";
+import { FaLocationDot } from "react-icons/fa6";
+
+
 import { IoMdCheckmark } from "react-icons/io"; // Ionicons
 import { MdCheck } from "react-icons/md";       // Material Design
 import { GoCheck } from "react-icons/go";       // Github Octicon
@@ -39,8 +47,8 @@ const CV = () => {
                 <table>
                   <tr>
                     <td><FaEnvelope /><a href="mailto:ampaiva@gmail.com"> ampaiva@gmail.com</a></td>
-                    <td><FaEnvelope /><a href="tel:+5531988122060"> +5531988122060</a></td>
-                    <td><FaEnvelope /><a href="geo:-19.4583,-44.2412?q=Sete%20Lagoas,%20MG,%20Brazil"> Brazil</a></td></tr>
+                    <td><FaWhatsapp /><a href="tel:+5531988122060"> +5531988122060</a></td>
+                    <td><FaLocationDot /><a href="geo:-19.4583,-44.2412?q=Sete%20Lagoas,%20MG,%20Brazil"> Brazil</a></td></tr>
                 </table>
               </tr>
               <tr>
@@ -50,7 +58,7 @@ const CV = () => {
                       <table>
                         <tr>
                           <div class="title">
-                            <div class="column"><div class="icon"><FaEnvelope /></div></div>
+                            <div class="column"><div class="icon"><TbTargetArrow /></div></div>
                             <div class="column"><div class="title">Objective</div></div>
                             <div class="column"><div class="filler"></div></div>
                           </div>
@@ -64,7 +72,7 @@ const CV = () => {
                     </div>
                     <div class="section">
                       <div class="title">
-                        <div class="column"><div class="icon"><FaEnvelope /></div></div>
+                        <div class="column"><div class="icon"><MdOutlineTopic /></div></div>
                         <div class="column"><div class="title">Summary</div></div>
                         <div class="column"><div class="filler"></div></div>
                       </div>
@@ -79,7 +87,7 @@ const CV = () => {
                     </div>
                     <div class="section">
                       <div class="title">
-                        <div class="column"><div class="icon"><FaEnvelope /></div></div>
+                        <div class="column"><div class="icon"><GiSkills /></div></div>
                         <div class="column"><div class="title">Skills</div></div>
                         <div class="column"><div class="filler"></div></div>
                       </div>
