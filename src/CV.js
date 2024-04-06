@@ -15,9 +15,41 @@ const CV = () => {
   }, []);
 
   return (
-    <div className="cv-container">
-      <div className="markdown" dangerouslySetInnerHTML={{ __html: marked(markdown) }} />
+    <div className="container">
+      <table>
+        <tr>
+          <td className="menu">Menu</td>
+          <td>
+            <table>
+              <tr className='x'><td><h1></h1></td>
+              </tr>
+              <tr className='name'>
+                <td>Alexandre Martins Paiva</td>
+              </tr>
+              <tr className='role'>
+                <td><h2>Engineering Manager | Senior Backend Engineer</h2></td>
+              </tr>
+              <tr className='contact'>
+                <table>
+                  <tr><td>ampaiva@gmail.com</td><td>+5531988122060</td><td>Brazil</td></tr>
+                </table>
+              </tr>
+              <tr>
+                <td>
+                  <div className='markdown'>
+                    <div className="column" dangerouslySetInnerHTML={{ __html: marked(markdown) }} />
+                  </div>
+                </td>
+              </tr>
+            </table>
+          </td>
+          <td className="help">
+          </td>
+        </tr>
+      </table>
     </div>
+
+
   );
 };
 

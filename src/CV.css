@@ -1,35 +1,59 @@
 /* Division */
-.App .cv-container div {
-  border-style: solid;
-  border-right-style: none;
-  border-left-style: none;
-  padding-left: 23px;
+.App .container div {
   font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', 'sans serif';
+  width: 100%;
 }
 
+td {
+  vertical-align: top;
+}
+
+
+/* Optional: Add some basic styling to the columns */
+.markdown {
+  padding: 10px;
+  border-radius: 5px;
+  column-count: 2;
+  column-gap: 20px;
+}
+
+
 /* Heading */
-.App div h1 {
-  text-align: center;
+.x {
   padding-top: 70px;
   background-color: #f5bb1b;
 }
 
-/* Heading */
-.App div h2 {
-  text-align: center;
-}
-
-/* Firstline */
-.App .firstline {
+.App div h1 {
   text-align: center;
   padding-top: 70px;
- background-color: #f5bb1b;
 }
 
-.App .markdown {
-  padding-right: 16px;
-  column-count: 2;
-  /* Number of columns */
-  column-gap: 20px;
-  /* Adjust gap between columns */
+.container .name td {
+  text-align: center;
+  font-size: 45px;
+}
+
+.container .role td {
+  text-align: center;
+  font-size: 19px;
+  font-weight: 400;
+  color: #f5bb1b;
+}
+
+.contact table {
+  text-align: center;
+  width: 100%;
+  border-bottom-style:solid;
+  border-top-style:solid;
+}
+
+
+/* Heading */
+.menu {
+  display: none;
+}
+
+.help {
+  display: none;
 }

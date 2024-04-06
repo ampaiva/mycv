@@ -1,12 +1,5 @@
-# Alexandre Martins Paiva
-## Engineering Manager | Senior Backend Engineer
 
-### Location (based in Brazil, open to a remote job (contractor)
 ### Objective (below Summary)
-* ampaiva@gmail.com
-* +5531988122060
-* linkedin.com/in/alexandrempaiva
-
 ### Summary
 Computer Science MSc in Software Engineering with a thesis on code clone. Extensive experience as
 an Electrical Engineer specializing in the development of mission-critical systems. Proficient in Python,
@@ -121,4 +114,4 @@ I propose in my MSc thesis a new method for code clone detection. As proof of co
 complete Java system (https://github.com/ampaiva/mcsheep) to parse Java projects in search of code
 clones.
 #### Universidade Federal de Minas Gerais
-##### Electrical Engineer
+##### Electrical EngineerMenu
