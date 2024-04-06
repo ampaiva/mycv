@@ -9,7 +9,7 @@ const CV = () => {
 
   useEffect(() => {
     // Fetch your Markdown content (for demonstration purposes, let's assume it's stored locally)
-    fetch('/ampaiva/mycv/cv-content.md')
+    fetch('/mycv/cv-content.md')
       .then(response => response.text())
       .then(text => setMarkdown(text))
       .catch(error => console.error('Error fetching CV content:', error));
