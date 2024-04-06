@@ -109,7 +109,7 @@ const CV = () => {
                           <div class="skill-bar" style={{ width: '98%' }}></div>
                         </div>
                         Python
-                        <div class="skill"> encompassing eight key management aspects.
+                        <div class="skill">
                           <div class="skill-bar" style={{ width: '90%' }}></div>
                         </div>
                         Django
