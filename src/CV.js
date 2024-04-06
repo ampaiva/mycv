@@ -16,7 +16,7 @@ const CV = () => {
 
   return (
     <div className="cv-container">
-      <div dangerouslySetInnerHTML={{ __html: marked(markdown) }} />
+      <div className="markdown" dangerouslySetInnerHTML={{ __html: marked(markdown) }} />
     </div>
   );
 };

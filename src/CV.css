@@ -1,10 +1,35 @@
-/* src/CV.css */
+/* Division */
+.App .cv-container div {
+  border-style: solid;
+  border-right-style: none;
+  border-left-style: none;
+  padding-left: 23px;
+  font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', 'sans serif';
+}
 
-.cv-container {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 20px;
-  }
-  
-  /* Add more styles as needed */
-  
+/* Heading */
+.App div h1 {
+  text-align: center;
+  padding-top: 70px;
+  background-color: #f5bb1b;
+}
+
+/* Heading */
+.App div h2 {
+  text-align: center;
+}
+
+/* Firstline */
+.App .firstline {
+  text-align: center;
+  padding-top: 70px;
+ background-color: #f5bb1b;
+}
+
+.App .markdown {
+  padding-right: 16px;
+  column-count: 2;
+  /* Number of columns */
+  column-gap: 20px;
+  /* Adjust gap between columns */
+}
