@@ -57,7 +57,7 @@ const CV = () => {
                         </tr>
                         <tr>
                           <div class="contents">
-                            To leverage my Engineering Manager and contribute effectively to a dynamic organization, where I can continuously enhance my abilities, collaborate with a diverse team, and drive impactful results.
+                            To leverage my skills and contribute effectively to a dynamic organization, where I can continuously enhance my abilities, collaborate with a diverse team, and drive impactful results.
                           </div>
                         </tr>
                       </table>
@@ -109,7 +109,7 @@ const CV = () => {
                           <div class="skill-bar" style={{ width: '98%' }}></div>
                         </div>
                         Python
-                        <div class="skill">
+                        <div class="skill"> encompassing eight key management aspects.
                           <div class="skill-bar" style={{ width: '90%' }}></div>
                         </div>
                         Django
