@@ -92,7 +92,7 @@ const CV = () => {
                         <div class="column"><div class="filler"></div></div>
                       </div>
                       <div class="contents">
-                      Stakeholder Management
+                        Stakeholder Management
                         <div class="skill">
                           <div class="skill-bar" style={{ width: '90%' }}></div>
                         </div>
