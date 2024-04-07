@@ -42,20 +42,22 @@
 
 .container .body .section .title {
   color: #f5bb1b;
-  font-size: large;
+  font-size: larger;
   display: grid;
   grid-template-columns: min-content min-content 1fr;
-}
-
-.title {
+  text-transform: uppercase;
   margin-left: 10px;
+  margin-top: 10px;
+  margin-bottom: 10px;
   flex-shrink: 1;
 }
 
-.filler {
+.container .body .section .title .filler {
+  width: 100%; /* Adjust the width of the skill bar container */
+  height: 100%; /* Adjust the height of the skill bar */
   margin-left: 10px;
-  font-size: large;
-  background-color: #0c62c4;
+  background-color: #ebebeb;
+  border-radius: 5px; /* Border radius for rounded corners */
 }
 
 .skill {

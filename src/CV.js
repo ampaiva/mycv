@@ -59,7 +59,7 @@ const CV = () => {
                         <tr>
                           <div class="title">
                             <div class="column"><div class="icon"><TbTargetArrow /></div></div>
-                            <div class="column"><div class="title">Objective</div></div>
+                            <div class="column"><div class="text">Objective</div></div>
                             <div class="column"><div class="filler"></div></div>
                           </div>
                         </tr>
@@ -73,7 +73,7 @@ const CV = () => {
                     <div class="section">
                       <div class="title">
                         <div class="column"><div class="icon"><MdOutlineTopic /></div></div>
-                        <div class="column"><div class="title">Summary</div></div>
+                        <div class="column"><div class="text">Summary</div></div>
                         <div class="column"><div class="filler"></div></div>
                       </div>
                       <div class="contents">
@@ -88,7 +88,7 @@ const CV = () => {
                     <div class="section">
                       <div class="title">
                         <div class="column"><div class="icon"><GiSkills /></div></div>
-                        <div class="column"><div class="title">Skills</div></div>
+                        <div class="column"><div class="text">Skills</div></div>
                         <div class="column"><div class="filler"></div></div>
                       </div>
                       <div class="contents">
