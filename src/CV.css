@@ -30,7 +30,6 @@
 }
 
 .container .body {
-  padding: 10px;
   border-radius: 5px;
   column-count: 2;
   column-gap: 20px;
@@ -46,10 +45,16 @@
   display: grid;
   grid-template-columns: min-content min-content 1fr;
   text-transform: uppercase;
-  margin-left: 10px;
   margin-top: 10px;
   margin-bottom: 10px;
-  flex-shrink: 1;
+}
+
+.container .body .section .title .icon {
+  margin-left: 0px;
+}
+
+.container .body .section .title .text {
+  margin-left: 10px;
 }
 
 .container .body .section .title .filler {
@@ -60,11 +65,16 @@
   border-radius: 5px; /* Border radius for rounded corners */
 }
 
+.container .body .section .contents {
+  text-align: justify;
+}
+
 .skill {
   width: 100%; /* Adjust the width of the skill bar container */
   height: 20px; /* Adjust the height of the skill bar */
   background-color: #4d4d4d; /* Background color of the skill bar */
   border-radius: 5px; /* Border radius for rounded corners */
+  margin-bottom: 5px;
 }
 
 .skill-bar {
