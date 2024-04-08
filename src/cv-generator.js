@@ -6,7 +6,11 @@ import { FaQuestionCircle } from "react-icons/fa";
 function Activities({ activities }) {
     return (
         <div className="activities">
-            {activities.join(' | ')}
+            <ul className="list">
+                {activities.map((activity) => (
+                    <li>{activity}</li>
+                ))}
+            </ul>
         </div>
     );
 }
@@ -47,7 +51,7 @@ function ExperienceList({ experiences }) {
         </div>
     );
 }
-function DictToHTML({jsonString}) {
+function DictToHTML({ jsonString }) {
 
     let data = null;
     let error = null;

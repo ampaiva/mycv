@@ -115,14 +115,13 @@
   border-width: 20px;
   border-radius: 5px;
   background-color: #f5bb1b;
-  width: 50%;
 }
 
 .experience .company-period .company {
   color: #f5bb1b;
   font-size: medium;
   text-transform: uppercase;
-  margin-left: 10px;
+  margin-left: 0px;
 }
 
 .experience .company-period .period {
@@ -130,6 +129,20 @@
   font-style: italic;
   font-size: small;
   margin-left: 10px;
+}
+
+.list {
+  list-style-type: none; /* Remove default bullets */
+  padding-left: 20px; /* Add some left padding to the list */
+}
+
+.list li:before {
+  content: ""; /* Add content before each list item */
+  display: inline-block;
+  width: 10px; /* Adjust the width of the bullet point */
+  height: 10px; /* Adjust the height of the bullet point */
+  background-color: #f5bb1b; /* Set the background color */
+  margin-right: 10px; /* Add some space between bullet point and text */
 }
 
 .help {

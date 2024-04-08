@@ -8,9 +8,9 @@ import { MdOutlineTopic } from "react-icons/md";
 import { TbTargetArrow } from "react-icons/tb";
 import { GiSkills } from "react-icons/gi";
 import { FaLocationDot } from "react-icons/fa6";
+import { MdWork } from "react-icons/md";
 
 
-import { marked } from 'marked';
 import DictToHTML from './cv-generator';
 
 import './CV.css';
@@ -148,16 +148,17 @@ const CV = () => {
                         </div>
                       </div>
                     </div>
-                  </div>
-                  <div class="section">
+                    <div class="section">
                     <div class="title">
-                      <div class="column"><div class="icon"><MdOutlineTopic /></div></div>
+                      <div class="column"><div class="icon"><MdWork /></div></div>
                       <div class="column"><div class="text">Experience</div></div>
                       <div class="column"><div class="filler"></div></div>
                     </div>
                     <div class="contents">
                       <DictToHTML jsonString={markdown} />
                     </div>
+                  </div>
+
                   </div>
                 </td>
               </tr>

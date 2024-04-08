@@ -6,7 +6,7 @@
                 "description": "Loadsmart is a startup founded in 2014 and based in Chicago. They provide logistic services for the US and                Canadian markets acting as a broker, connecting shippers with carriers. Loadsmart also has a division that provides SaaS for the logistics industry."
             },
             "start": "10/2019",
-            "end": "04/2023",
+            "end": "04/2023 (4y 3m)",
             "roles": [
                 "Engineering Manager",
                 "Tech Lead",
@@ -15,6 +15,22 @@
             "activities": [
                 "Managed 17 developers with ~90% of retention",
                 "Promoted 8 direct reports, including the first company Staff Engineer"
+            ]
+        },
+        {
+            "company": {
+                "name": "Crossover",
+                "description": "Crossover is one of the companies of ESW Capital. Based in Austin, Texas, the ESW Capital group specifically focuses on buying, strengthening, and then growing mature business software companies."
+            },
+            "start": "04/2016",
+            "end": "10/2019 (3y 7m)",
+            "roles": [
+                "Senior Backend Developer"
+            ],
+            "activities": [
+                "Aurea: Maintenance of Java Systems responsible for exchanging Electronic Data Interchange (EDI)",
+                "Trilogy: Migration of source code from different Version Control Systems to Github",
+                "Optiva: Maintenance and development of new features for Optiva Business Support Systems (BSS) solutions Java development for telephony billing. Development using a proprietary language and platform to process billing scenarios for the telecommunications industry"
             ]
         }
     ]
