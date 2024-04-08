@@ -1,0 +1,21 @@
+{
+    "experiences": [
+        {
+            "company": {
+                "name": "Loadsmart",
+                "description": "Loadsmart is a startup founded in 2014 and based in Chicago. They provide logistic services for the US and                Canadian markets acting as a broker, connecting shippers with carriers. Loadsmart also has a division that provides SaaS for the logistics industry."
+            },
+            "start": "10/2019",
+            "end": "04/2023",
+            "roles": [
+                "Engineering Manager",
+                "Tech Lead",
+                "Senior Backend Developer"
+            ],
+            "activities": [
+                "Managed 17 developers with ~90% of retention",
+                "Promoted 8 direct reports, including the first company Staff Engineer"
+            ]
+        }
+    ]
+}

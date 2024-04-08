@@ -10,18 +10,16 @@ import { GiSkills } from "react-icons/gi";
 import { FaLocationDot } from "react-icons/fa6";
 
 
-import { IoMdCheckmark } from "react-icons/io"; // Ionicons
-import { MdCheck } from "react-icons/md";       // Material Design
-import { GoCheck } from "react-icons/go";       // Github Octicon
-
 import { marked } from 'marked';
+import DictToHTML from './cv-generator';
+
 import './CV.css';
 
 const CV = () => {
   const [markdown, setMarkdown] = useState('');
 
   useEffect(() => {
-    fetch('/mycv/cv-content.md')
+    fetch('/mycv/cv.json')
       .then(response => response.text())
       .then(text => setMarkdown(text))
       .catch(error => console.error('Error fetching CV content:', error));
@@ -68,7 +66,7 @@ const CV = () => {
                             To leverage my skills and contribute effectively to a dynamic organization, where I can continuously enhance my abilities, collaborate with a diverse team, and drive impactful results.
                           </div>
                         </tr>
-                      </table>
+                      </table>error.message
                     </div>
                     <div class="section">
                       <div class="title">
@@ -151,12 +149,15 @@ const CV = () => {
                       </div>
                     </div>
                   </div>
-                </td>
-              </tr>
-              <tr>
-                <td>
-                  <div className='markdown'>
-                    <div className="column" dangerouslySetInnerHTML={{ __html: marked(markdown) }} />
+                  <div class="section">
+                    <div class="title">
+                      <div class="column"><div class="icon"><MdOutlineTopic /></div></div>
+                      <div class="column"><div class="text">Experience</div></div>
+                      <div class="column"><div class="filler"></div></div>
+                    </div>
+                    <div class="contents">
+                      <DictToHTML jsonString={markdown} />
+                    </div>
                   </div>
                 </td>
               </tr>
@@ -167,8 +168,6 @@ const CV = () => {
         </tr>
       </table>
     </div>
-
-
   );
 };
 
