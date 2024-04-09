@@ -11,17 +11,18 @@ import { FaLocationDot } from "react-icons/fa6";
 import { MdWork } from "react-icons/md";
 
 
-import DictToHTML from './cv-generator';
+import Objective from './parser/objective';
+import ExperienceList from './parser/experiences';
 
 import './CV.css';
 
 const CV = () => {
-  const [markdown, setMarkdown] = useState('');
+  const [data, setMarkdown] = useState('');
 
   useEffect(() => {
     fetch('/mycv/cv.json')
       .then(response => response.text())
-      .then(text => setMarkdown(text))
+      .then(text => setMarkdown(JSON.parse(text)))
       .catch(error => console.error('Error fetching CV content:', error));
   }, []);
 
@@ -52,22 +53,7 @@ const CV = () => {
               <tr>
                 <td>
                   <div class='body'>
-                    <div class="section">
-                      <table>
-                        <tr>
-                          <div class="title">
-                            <div class="column"><div class="icon"><TbTargetArrow /></div></div>
-                            <div class="column"><div class="text">Objective</div></div>
-                            <div class="column"><div class="filler"></div></div>
-                          </div>
-                        </tr>
-                        <tr>
-                          <div class="contents">
-                            To leverage my skills and contribute effectively to a dynamic organization, where I can continuously enhance my abilities, collaborate with a diverse team, and drive impactful results.
-                          </div>
-                        </tr>
-                      </table>error.message
-                    </div>
+                    <Objective objective={data.objective}/>
                     <div class="section">
                       <div class="title">
                         <div class="column"><div class="icon"><MdOutlineTopic /></div></div>
@@ -148,17 +134,7 @@ const CV = () => {
                         </div>
                       </div>
                     </div>
-                    <div class="section">
-                    <div class="title">
-                      <div class="column"><div class="icon"><MdWork /></div></div>
-                      <div class="column"><div class="text">Experience</div></div>
-                      <div class="column"><div class="filler"></div></div>
-                    </div>
-                    <div class="contents">
-                      <DictToHTML jsonString={markdown} />
-                    </div>
-                  </div>
-
+                    <ExperienceList experiences={data.experiences} />
                   </div>
                 </td>
               </tr>

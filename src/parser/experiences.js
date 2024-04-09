@@ -3,6 +3,7 @@
 import React, { useState, useRef } from 'react';
 import { FaQuestionCircle } from "react-icons/fa";
 import { GrCaretNext, GrCaretPrevious } from "react-icons/gr";
+import { MdWork } from "react-icons/md";
 
 const toHTML = (text) => {
     // Regular expression to match Markdown links
@@ -79,20 +80,22 @@ function ExperienceList({ experiences }) {
         setCurrentPage(currentPage - 1);
     };
 
-    return (
-        <div className="experiences">
-            {currentItems.map((experience) => (
-                <Experience experience={experience} />
-            ))}
-            <div className='pagination'>
-                {currentPage > 1 && (
-                    <a href="#" className='prev' ref={prevRef} onClick={prevPage}><GrCaretPrevious/></a>
-                )}
-                {endIndex < allItems.length && (
-                    <a href="#" className='next' ref={nextRef} onClick={nextPage}><GrCaretNext/></a>
-                )}
-            </div>
+    const contents = <div className="experiences">
+        {currentItems.map((experience) => (
+            <Experience experience={experience} />
+        ))}
+        <div className='pagination'>
+            {currentPage > 1 && (
+                <a href="#" className='prev' ref={prevRef} onClick={prevPage}><GrCaretPrevious />Previous</a>
+            )}
+            {endIndex < allItems.length && (
+                <a href="#" className='next' ref={nextRef} onClick={nextPage}>Next<GrCaretNext /></a>
+            )}
         </div>
+    </div>;
+
+    return (
+        <Session icon={MdWork}  text="Experience" contents={contents}/>
     );
 }
 
@@ -121,4 +124,4 @@ function DictToHTML({ jsonString }) {
     );
 };
 
-export default DictToHTML;
+export default ExperienceList;
