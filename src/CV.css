@@ -132,17 +132,34 @@
 }
 
 .list {
-  list-style-type: none; /* Remove default bullets */
-  padding-left: 20px; /* Add some left padding to the list */
+  list-style-type: none;
+  padding-left: 20px;
 }
 
 .list li:before {
-  content: ""; /* Add content before each list item */
+  content: "";
   display: inline-block;
-  width: 10px; /* Adjust the width of the bullet point */
-  height: 10px; /* Adjust the height of the bullet point */
-  background-color: #f5bb1b; /* Set the background color */
-  margin-right: 10px; /* Add some space between bullet point and text */
+  width: 10px;
+  height: 10px;
+  background-color: #f5bb1b;
+  margin-right: 10px;
+}
+
+.pagination {
+  background-color:  #f5bb1b;
+  display: flex;
+  justify-content: space-between;
+  border-color: #000000;
+  border-width: 20px;
+  border-radius: 5px;
+}
+
+.prev {
+  margin-right: auto;
+}
+
+.next {
+  margin-left: auto;
 }
 
 .help {
