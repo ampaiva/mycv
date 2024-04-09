@@ -17,7 +17,7 @@ import ExperienceList from './parser/experiences';
 import './CV.css';
 
 const CV = () => {
-  const [data, setMarkdown] = useState('');
+  const [data, setMarkdown] = useState(null);
 
   useEffect(() => {
     fetch('/mycv/cv.json')
@@ -34,13 +34,12 @@ const CV = () => {
           <td>
             <table>
               <tr className='toppage'>
-                <td></td>
               </tr>
               <tr className='name'>
-                <td>Alexandre Martins Paiva</td>
+                {data && (<td>{data?.header?.name}</td>)}
               </tr>
               <tr className='role'>
-                <td>Engineering Manager | Senior Backend Engineer</td>
+                {data && (<td>{data.header.roles.join(' | ')}</td>)}
               </tr>
               <tr className='contact'>
                 <table>
@@ -53,7 +52,7 @@ const CV = () => {
               <tr>
                 <td>
                   <div class='body'>
-                    <Objective objective={data.objective}/>
+                    <Objective objective={data?.objective} />
                     <div class="section">
                       <div class="title">
                         <div class="column"><div class="icon"><MdOutlineTopic /></div></div>
@@ -134,7 +133,7 @@ const CV = () => {
                         </div>
                       </div>
                     </div>
-                    <ExperienceList experiences={data.experiences} />
+                    <ExperienceList experiences={data?.experiences} />
                   </div>
                 </td>
               </tr>

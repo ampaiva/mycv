@@ -66,7 +66,7 @@ function ExperienceList({ experiences }) {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
 
-    const allItems = experiences;
+    const allItems = experiences ?? [];
 
     // Get items for the current page
     const currentItems = allItems.slice(startIndex, endIndex);
@@ -96,7 +96,7 @@ function ExperienceList({ experiences }) {
     </div>;
 
     return (
-        <Session icon={MdWork}  text="Experience" contents={contents}/>
+        <Session icon={MdWork} text="Experience" contents={contents} />
     );
 }
 

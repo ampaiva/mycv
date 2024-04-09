@@ -3,7 +3,7 @@ import Session from './session'
 
 function Objective({ objective }) {
     return (
-        <Session icon={TbTargetArrow}  text="Objective" contents={objective}/>
+        objective && (<Session icon={TbTargetArrow} text="Objective" contents={objective}/>)
     );
 }
 
