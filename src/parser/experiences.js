@@ -4,6 +4,7 @@ import React, { useState, useRef } from 'react';
 import { FaQuestionCircle } from "react-icons/fa";
 import { GrCaretNext, GrCaretPrevious } from "react-icons/gr";
 import { MdWork } from "react-icons/md";
+import Session from './session'
 
 const toHTML = (text) => {
     // Regular expression to match Markdown links
