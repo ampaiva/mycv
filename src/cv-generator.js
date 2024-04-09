@@ -2,19 +2,24 @@
 
 import React, { useState } from 'react';
 import { FaQuestionCircle } from "react-icons/fa";
-import { marked } from 'marked'
 
-const renderer = new marked.Renderer();
-renderer.link = function (href, title, text) {
-    return `<a href="${href}" title="${title || ''}" target="_blank">${text}</a>`;
-};
+const toHTML = (text) => {
+    // Regular expression to match Markdown links
+    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
+
+    // Replace Markdown links with HTML links
+    const htmlText = text.replace(linkRegex, '<a href="$2" target="_blank">$1</a>');
+
+    return htmlText;
+}
+
 
 function Activities({ activities }) {
     return (
         <div className="activities">
             <ul className="list">
                 {activities.map((activity) => (
-                    <li>{activity}</li>
+                    <li dangerouslySetInnerHTML={{ __html: toHTML(activity) }} />
                 ))}
             </ul>
         </div>
@@ -24,7 +29,7 @@ function Activities({ activities }) {
 function Roles({ roles }) {
     return (
         <div className="roles">
-            {roles.join(' |experience.company.description ')}
+            {roles.join(' | ')}
         </div>
     );
 }
@@ -36,7 +41,7 @@ function Experience({ experience }) {
         <div className="experience">
             <Roles roles={experience.roles} />
             <div className="container">
-                {isHovered && <div className="box" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} dangerouslySetInnerHTML={{ __html: marked(experience.company.description, { renderer: renderer }) }} />}
+                {isHovered && <div className="box" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} dangerouslySetInnerHTML={{ __html: toHTML(experience.company.description) }} />}
             </div>
             <div className="company-period">
                 <div class="column"><div className="company">{experience.company.name}</div></div>

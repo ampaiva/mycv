@@ -53,8 +53,7 @@ Most of the development required international assignments:
 * 3 months in Montreal (Canada) developing solutions for IPTV (Ericsson)
 * 1 month in New Delhi (India) deploying systems for Ericsson customers
 * 1 month in Atlanta-GE (USA) developing solutions for Content Management System (Ericsson)* 
-2 months in Shanghai (China) as a member of the A7515 development team, an Alcatel-Lucent NGN
-gateway using protocols R2, ISDN, and SIP
+* 2 months in Shanghai (China) as a member of the A7515 development team, an Alcatel-Lucent NGN gateway using protocols R2, ISDN, and SIP
 
 #### Project Lead Developer
 #### ATAN
