@@ -59,7 +59,8 @@
             "start": "08/2005",
             "end": "09/2006 (1y 2m)",
             "roles": [
-                "Senior Backend Developer", "Project Lead"
+                "Senior Backend Developer",
+                "Project Lead"
             ],
             "activities": [
                 "Development of IT systems mainly using Java and J2EE application servers, attending customers such as [Arcelor-Mittal](https://corporate.arcelormittal.com/)",
@@ -82,6 +83,19 @@
                 "2 months in Naperville-IL (USA) for testing CALEA feature of iGEN, a Lucent Technologies class 5 switch",
                 "8 months in Phoenix-AZ (USA) as a member of the iMerge development team, a Lucent Technologies voice-over IP platform using protocols H.323 and NCS"
             ]
+        }
+    ],
+    "education": [
+        {
+            "school": "Universidade Federal de Minas Gerais",
+            "degree": "Master's Degree, Computer Science",
+            "start": "2013",
+            "end": "2015",
+            "activities": "I propose in my MSc thesis a new method for code clone detection. As proof of concept, I developed a complete [Java system](https://github.com/ampaiva/mcsheep) to parse Java projects in search of code clones."
+        },
+        {
+            "school": "Universidade Federal de Minas Gerais",
+            "degree": "Bacharelor,  Electrical Engineer"
         }
     ]
 }
