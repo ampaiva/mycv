@@ -2,6 +2,12 @@
 
 import React, { useState } from 'react';
 import { FaQuestionCircle } from "react-icons/fa";
+import { marked } from 'marked'
+
+const renderer = new marked.Renderer();
+renderer.link = function (href, title, text) {
+    return `<a href="${href}" title="${title || ''}" target="_blank">${text}</a>`;
+};
 
 function Activities({ activities }) {
     return (
@@ -18,7 +24,7 @@ function Activities({ activities }) {
 function Roles({ roles }) {
     return (
         <div className="roles">
-            {roles.join(' | ')}
+            {roles.join(' |experience.company.description ')}
         </div>
     );
 }
@@ -30,7 +36,7 @@ function Experience({ experience }) {
         <div className="experience">
             <Roles roles={experience.roles} />
             <div className="container">
-                {isHovered && <div className="box">{experience.company.description}</div>}
+                {isHovered && <div className="box" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} dangerouslySetInnerHTML={{ __html: marked(experience.company.description, { renderer: renderer }) }} />}
             </div>
             <div className="company-period">
                 <div class="column"><div className="company">{experience.company.name}</div></div>
