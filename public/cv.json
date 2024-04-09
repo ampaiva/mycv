@@ -93,14 +93,15 @@
     "education": [
         {
             "school": "Universidade Federal de Minas Gerais",
-            "degree": "Master's Degree, Computer Science",
+            "degree": ["Master's Degree", "Computer Science"],
             "start": "2013",
             "end": "2015",
-            "activities": "I propose in my MSc thesis a new method for code clone detection. As proof of concept, I developed a complete [Java system](https://github.com/ampaiva/mcsheep) to parse Java projects in search of code clones."
+            "activities": ["I propose in my MSc thesis a new method for code clone detection. As proof of concept, I developed a complete [Java system](https://github.com/ampaiva/mcsheep) to parse Java projects in search of code clones."]
         },
         {
             "school": "Universidade Federal de Minas Gerais",
-            "degree": "Bacharelor,  Electrical Engineer"
+            "degree": ["Bacharelor",  "Electrical Engineer"],
+            "activities": []
         }
     ]
 }

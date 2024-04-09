@@ -117,14 +117,14 @@
   background-color: #f5bb1b;
 }
 
-.experience .company-period .company {
+.experience .company-period .company, .school-period .school {
   color: #f5bb1b;
   font-size: medium;
   text-transform: uppercase;
   margin-left: 0px;
 }
 
-.experience .company-period .period {
+.experience .company-period .period, .school-period .period {
   color: #dddddd;
   font-style: italic;
   font-size: small;

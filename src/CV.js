@@ -13,6 +13,7 @@ import { MdWork } from "react-icons/md";
 
 import Objective from './parser/objective';
 import ExperienceList from './parser/experiences';
+import Educations from './parser/education';
 
 import './CV.css';
 
@@ -134,6 +135,7 @@ const CV = () => {
                       </div>
                     </div>
                     <ExperienceList experiences={data?.experiences} />
+                    <Educations educations={data?.education} />
                   </div>
                 </td>
               </tr>
