@@ -1,9 +1,62 @@
 {
     "header": {
         "name": "Alexandre Martins Paiva",
-        "roles": ["Engineering Manager", "Senior Backend Engineer"]
+        "roles": [
+            "Engineering Manager",
+            "Senior Backend Engineer"
+        ]
     },
     "objective": "To leverage my skills and contribute effectively to a dynamic organization, where I can continuously enhance my abilities, collaborate with a diverse team, and drive impactful results.",
+    "skills": [
+        [
+            "Stakeholder Management",
+            90
+        ],
+        [
+            "Team Building",
+            95
+        ],
+        [
+            "Software Development",
+            95
+        ],
+        [
+            "C++",
+            95
+        ],
+        [
+            "Java",
+            98
+        ],
+        [
+            "Python",
+            90
+        ],
+        [
+            "Django",
+            80
+        ],
+        [
+            "Embedded Systems",
+            70
+        ],
+        [
+            "Agile Methodologies",
+            90
+        ],
+        [
+            "Engineering Management",
+            85
+        ],
+        [
+            "Portuguese",
+            100
+        ],
+        [
+            "English",
+            90
+        ]
+    ],
     "experiences": [
         {
             "company": {
@@ -93,14 +146,22 @@
     "education": [
         {
             "school": "Universidade Federal de Minas Gerais",
-            "degree": ["Master's Degree", "Computer Science"],
+            "degree": [
+                "Master's Degree",
+                "Computer Science"
+            ],
             "start": "2013",
             "end": "2015",
-            "activities": ["I propose in my MSc thesis a new method for code clone detection. As proof of concept, I developed a complete [Java system](https://github.com/ampaiva/mcsheep) to parse Java projects in search of code clones."]
+            "activities": [
+                "I propose in my MSc thesis a new method for code clone detection. As proof of concept, I developed a complete [Java system](https://github.com/ampaiva/mcsheep) to parse Java projects in search of code clones."
+            ]
         },
         {
             "school": "Universidade Federal de Minas Gerais",
-            "degree": ["Bacharelor",  "Electrical Engineer"],
+            "degree": [
+                "Bacharelor",
+                "Electrical Engineer"
+            ],
             "activities": []
         }
     ]
