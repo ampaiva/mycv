@@ -1,10 +1,10 @@
 
 
-import React, { useState, useRef } from 'react';
+import React, { useState } from 'react';
 import { FaQuestionCircle } from "react-icons/fa";
-import { GrCaretNext, GrCaretPrevious } from "react-icons/gr";
 import { MdWork } from "react-icons/md";
 import Session from './session'
+import Pagination from './pagination';
 
 const toHTML = (text) => {
     // Regular expression to match Markdown links
@@ -56,44 +56,8 @@ function Experience({ experience }) {
     );
 }
 
-function ExperienceList({ experiences }) {
-    const [currentPage, setCurrentPage] = useState(1);
-    const itemsPerPage = 3;
-    const prevRef = useRef(null);
-    const nextRef = useRef(null);
-
-    // Calculate start and end index of items to display
-    const startIndex = (currentPage - 1) * itemsPerPage;
-    const endIndex = startIndex + itemsPerPage;
-
-    const allItems = experiences ?? [];
-
-    // Get items for the current page
-    const currentItems = allItems.slice(startIndex, endIndex);
-
-    // Handler for next page click
-    const nextPage = () => {
-        setCurrentPage(currentPage + 1);
-    };
-
-    // Handler for previous page click
-    const prevPage = () => {
-        setCurrentPage(currentPage - 1);
-    };
-
-    const contents = <div className="experiences">
-        {currentItems.map((experience) => (
-            <Experience experience={experience} />
-        ))}
-        <div className='pagination'>
-            {currentPage > 1 && (
-                <a href="#" className='prev' ref={prevRef} onClick={prevPage}><GrCaretPrevious />Previous</a>
-            )}
-            {endIndex < allItems.length && (
-                <a href="#" className='next' ref={nextRef} onClick={nextPage}>Next<GrCaretNext /></a>
-            )}
-        </div>
-    </div>;
+function Experiences({ experiences }) {
+    const contents = <Pagination items={experiences} itemsPerPage={3} itemRender={(experience) => <Experience experience={experience} />}/>; 
 
     return (
         <Session icon={MdWork} text="Experience" contents={contents} />
@@ -101,28 +65,4 @@ function ExperienceList({ experiences }) {
 }
 
 
-function DictToHTML({ jsonString }) {
-
-    let data = null;
-    let error = null;
-    try {
-        data = JSON.parse(jsonString);
-    } catch (e) {
-        error = e;
-    }
-    return (
-        <div>
-            {data && (
-                <ExperienceList experiences={data.experiences} />
-            )}
-            {error && (
-                <div>
-                    <p>Error parsing JSON: {error.message}</p>
-                    <p>jsonString</p>
-                </div>
-            )}
-        </div>
-    );
-};
-
-export default ExperienceList;
+export default Experiences;
