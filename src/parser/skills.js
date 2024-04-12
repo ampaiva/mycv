@@ -1,5 +1,5 @@
 
-import React from 'react';
+import React, { useState } from 'react';
 import { GiSkills } from "react-icons/gi";
 import Pagination from './pagination';
 import { useLabels } from '../state/LabelsContext';
@@ -7,12 +7,7 @@ import { useLabels } from '../state/LabelsContext';
 function Skill({ skill, index }) {
     const { labelStates, setLabelStates } = useLabels();
     const tag = skill[0].toLowerCase();
-    if (!labelStates.hasOwnProperty(tag)) {
-        labelStates[tag] = true;
-        const newLabelStates = { ...labelStates };
-        setLabelStates(newLabelStates);
-    }
-    
+
     const isSelected = labelStates[tag];
 
     return (
@@ -32,6 +27,18 @@ function Skill({ skill, index }) {
 
 
 function Skills({ skills }) {
+    const { labelStates, setLabelStates } = useLabels();
+    const [isGlobalSelected, setGlobalSelect] = useState(true);
+
+    for (const skill in skills) {
+        const tag = skill[0];
+        if (!labelStates.hasOwnProperty(tag)) {
+            labelStates[tag] = isGlobalSelected;
+            const newLabelStates = { ...labelStates };
+            setLabelStates(newLabelStates);
+        }
+    }
+
     const session = (
         <div className="section">
             <div className="title">
@@ -40,7 +47,17 @@ function Skills({ skills }) {
                 <div classNLabelsProviderame="column"><div className="filler"></div></div>
             </div>
             <div className="contents">
-                {<Pagination items={skills} itemsPerPage={30} itemRender={(item, index) => <Skill skill={item} index={index} />} />}
+                <input type="checkbox" checked={isGlobalSelected} onChange={(e) => {
+                    setGlobalSelect(e.target.checked);
+                    const newLabelStates = { ...labelStates };
+                    for (const tag in newLabelStates) {
+                        // Set the value of each key to false
+                        newLabelStates[tag] = !isGlobalSelected;
+                    }
+                    setLabelStates(newLabelStates);
+                }} />
+
+                {<Pagination items={skills} itemsPerPage={30} itemRender={(item, index) => <Skill skill={item} index={index} isGlobalSelected={isGlobalSelected} />} />}
             </div>
         </div>
     );
