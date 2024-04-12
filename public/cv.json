@@ -9,10 +9,6 @@
     "objective": "To leverage my skills and contribute effectively to a dynamic organization, where I can continuously enhance my abilities, collaborate with a diverse team, and drive impactful results.",
     "skills": [
         [
-            "Stakeholder Management",
-            90
-        ],
-        [
             "Team Building",
             95
         ],
@@ -71,8 +67,18 @@
                 "Senior Backend Developer"
             ],
             "activities": [
-                "Managed 17 developers with ~90% of retention",
-                "Promoted 8 direct reports, including the first company Staff Engineer"
+                {
+                    "description": "Managed 17 developers with ~90% of retention",
+                    "tags": [
+                        "engineering management"
+                    ]
+                },
+                {
+                    "description": "Promoted 8 direct reports, including the first company Staff Engineer",
+                    "tags": [
+                        "engineering management"
+                    ]
+                }
             ]
         },
         {

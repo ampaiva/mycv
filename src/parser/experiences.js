@@ -5,6 +5,7 @@ import { FaQuestionCircle } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import Session from './session'
 import Pagination from './pagination';
+import { useLabels } from '../state/LabelsContext';
 
 const toHTML = (text) => {
     // Regular expression to match Markdown links
@@ -16,16 +17,30 @@ const toHTML = (text) => {
     return htmlText;
 }
 
+function Visible({ activity, index }) {
+    const { labelStates } = useLabels();
+
+    const visible = activity?.tags ? activity?.tags.some(tag => labelStates[tag.toLowerCase()]) : true;
+
+    return <div>{visible && (<li key={index} dangerouslySetInnerHTML={{ __html: toHTML(activity?.description ?? activity) }} />)}</div>;
+}
+
+function Activity({ activity, index }) {
+    return (
+        <Visible activity={activity} index={index} />
+    );
+}
+
 
 function Activities({ activities }) {
     return (
-        <div className="activities">
-            <ul className="list">
-                {activities.map((activity) => (
-                    <li dangerouslySetInnerHTML={{ __html: toHTML(activity) }} />
-                ))}
-            </ul>
-        </div>
+            <div className="activities">
+                <ul className="list">
+                    {activities.map((activity, index) => (
+                        <Activity activity={activity} index={index} />
+                    ))}
+                </ul>
+            </div>
     );
 }
 
@@ -57,7 +72,7 @@ function Experience({ experience }) {
 }
 
 function Experiences({ experiences }) {
-    const contents = <Pagination items={experiences} itemsPerPage={3} itemRender={(experience) => <Experience experience={experience} />}/>; 
+    const contents = <Pagination items={experiences} itemsPerPage={3} itemRender={(experience) => <Experience experience={experience} />} />;
 
     return (
         <Session icon={MdWork} text="Experience" contents={contents} />

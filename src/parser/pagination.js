@@ -25,9 +25,9 @@ function Pagination({ items, itemsPerPage, itemRender}) {
         setCurrentPage(currentPage - 1);
     };
 
-    const contents = <div className="education">
-        {currentItems.map((education) => (
-            itemRender(education)
+    const contents = <div className="pagination-item">
+        {currentItems.map((education, index) => (
+            itemRender(education, index)
         ))}
         <div className='pagination'>
             {currentPage > 1 && (

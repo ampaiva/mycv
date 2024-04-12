@@ -9,6 +9,7 @@ import Objective from './parser/objective';
 import Skills from './parser/skills';
 import Experiences from './parser/experiences';
 import Educations from './parser/education';
+import { LabelsProvider } from './state/LabelsContext';
 
 import './CV.css';
 
@@ -23,45 +24,56 @@ const CV = () => {
   }, []);
 
   return (
-    <div className="container">
-      <table>
-        <tr>
-          <td className="menu">Menu</td>
-          <td>
-            <table>
-              <tr className='toppage'>
-              </tr>
-              <tr className='name'>
-                {data && (<td>{data?.header?.name}</td>)}
-              </tr>
-              <tr className='role'>
-                {data && (<td>{data.header.roles.join(' | ')}</td>)}
-              </tr>
-              <tr className='contact'>
+    <LabelsProvider>
+      <div className="container">
+        <table>
+          <tbody>
+            <tr>
+              <td className="menu">Menu</td>
+              <td>
                 <table>
-                  <tr>
-                    <td><FaEnvelope /><a href="mailto:ampaiva@gmail.com"> ampaiva@gmail.com</a></td>
-                    <td><FaWhatsapp /><a href="tel:+5531988122060"> +5531988122060</a></td>
-                    <td><FaLocationDot /><a href="geo:-19.4583,-44.2412?q=Sete%20Lagoas,%20MG,%20Brazil"> Brazil</a></td></tr>
+                  <tbody>
+                    <tr className='toppage'>
+                    </tr>
+                    <tr className='name'>
+                      {data && (<td>{data?.header?.name}</td>)}
+                    </tr>
+                    <tr className='role'>
+                      {data && (<td>{data.header.roles.join(' | ')}</td>)}
+                    </tr>
+                    <tr className='contact'>
+                      <td>
+                        <table>
+                          <tbody>
+                            <tr>
+                              <td><FaEnvelope /><a href="mailto:ampaiva@gmail.com"> ampaiva@gmail.com</a></td>
+                              <td><FaWhatsapp /><a href="tel:+5531988122060"> +5531988122060</a></td>
+                              <td><FaLocationDot /><a href="geo:-19.4583,-44.2412?q=Sete%20Lagoas,%20MG,%20Brazil"> Brazil</a></td>
+                            </tr>
+                          </tbody>
+                        </table>
+                      </td>
+                    </tr>
+                    <tr>
+                      <td>
+                        <div className='body'>
+                          <Objective objective={data?.objective} />
+                          <Skills skills={data?.skills} />
+                          <Experiences experiences={data?.experiences} />
+                          <Educations educations={data?.education} />
+                        </div>
+                      </td>
+                    </tr>
+                  </tbody>
                 </table>
-              </tr>
-              <tr>
-                <td>
-                  <div class='body'>
-                    <Objective objective={data?.objective} />
-                    <Skills skills={data?.skills} />
-                    <Experiences experiences={data?.experiences} />
-                    <Educations educations={data?.education} />
-                  </div>
-                </td>
-              </tr>
-            </table>
-          </td>
-          <td className="help">
-          </td>
-        </tr>
-      </table>
-    </div>
+              </td>
+              <td className="help">
+              </td>
+            </tr>
+          </tbody>
+        </table>
+      </div>
+    </LabelsProvider>
   );
 };
 

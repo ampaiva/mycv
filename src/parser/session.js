@@ -1,22 +1,28 @@
 function Session({ icon: Icon, text, contents }) {
-    return (
-        <div class="section">
-        <table>
+  return (
+    <div className="section">
+      <table>
+        <tbody>
           <tr>
-            <div class="title">
-              <div class="column"><div class="icon">{<Icon />}</div></div>
-              <div class="column"><div class="text">{text}</div></div>
-              <div class="column"><div class="filler"></div></div>
-            </div>
+            <td>
+              <div className="title">
+                <div className="column"><div className="icon">{<Icon />}</div></div>
+                <div className="column"><div className="text">{text}</div></div>
+                <div className="column"><div className="filler"></div></div>
+              </div>
+            </td>
           </tr>
           <tr>
-            <div class="contents">
-              {contents}
-            </div>
+            <td>
+              <div className="contents">
+                {contents}
+              </div>
+            </td>
           </tr>
-        </table>
-      </div>
-    );
+        </tbody>
+      </table>
+    </div>
+  );
 }
 
 export default Session;
