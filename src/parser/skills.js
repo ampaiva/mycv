@@ -1,21 +1,32 @@
 
-import React, { useState } from 'react';
+import React from 'react';
 import { GiSkills } from "react-icons/gi";
 import Pagination from './pagination';
-import { useLabels } from '../state/LabelsContext';
+import { useGlobalContext } from '../state/GlobalContext';
+import Checkbox from '../components/checkbox';
 
 function Skill({ skill, index }) {
-    const { labelStates, setLabelStates } = useLabels();
+    const { globalContext, setGlobalContext } = useGlobalContext();
     const tag = skill[0].toLowerCase();
+    const isGlobalSelected = globalContext["isGlobalSelected"];
 
-    const isSelected = labelStates[tag];
+    if ((isGlobalSelected !== undefined) &&
+        (!globalContext["labelSelected"].hasOwnProperty(tag) || (globalContext["labelSelected"][tag] !== isGlobalSelected))) {
+        const newGlobalContext = { ...globalContext };
+        newGlobalContext["labelSelected"][tag] = isGlobalSelected;
+        setGlobalContext(newGlobalContext);
+    }
+
+    const isSelected = isGlobalSelected === undefined ? globalContext["labelSelected"][tag] : isGlobalSelected;
 
     return (
         <div key={index}>
             <input type="checkbox" checked={isSelected} onChange={(e) => {
-                const newLabelStates = { ...labelStates };
-                newLabelStates[tag] = e.target.checked;
-                setLabelStates(newLabelStates);
+                const newGlobalContext = { ...globalContext };
+                newGlobalContext["labelSelected"][tag] = e.target.checked;
+                newGlobalContext["isGlobalSelected"] = undefined;
+                setGlobalContext(newGlobalContext);
+                console.log(newGlobalContext);
             }} />
             <label>{skill[0]}</label>
             <div className={isSelected ? 'skill selected' : 'skill unselected'}>
@@ -27,18 +38,6 @@ function Skill({ skill, index }) {
 
 
 function Skills({ skills }) {
-    const { labelStates, setLabelStates } = useLabels();
-    const [isGlobalSelected, setGlobalSelect] = useState(true);
-
-    for (const skill in skills) {
-        const tag = skill[0];
-        if (!labelStates.hasOwnProperty(tag)) {
-            labelStates[tag] = isGlobalSelected;
-            const newLabelStates = { ...labelStates };
-            setLabelStates(newLabelStates);
-        }
-    }
-
     const session = (
         <div className="section">
             <div className="title">
@@ -47,17 +46,8 @@ function Skills({ skills }) {
                 <div classNLabelsProviderame="column"><div className="filler"></div></div>
             </div>
             <div className="contents">
-                <input type="checkbox" checked={isGlobalSelected} onChange={(e) => {
-                    setGlobalSelect(e.target.checked);
-                    const newLabelStates = { ...labelStates };
-                    for (const tag in newLabelStates) {
-                        // Set the value of each key to false
-                        newLabelStates[tag] = !isGlobalSelected;
-                    }
-                    setLabelStates(newLabelStates);
-                }} />
-
-                {<Pagination items={skills} itemsPerPage={30} itemRender={(item, index) => <Skill skill={item} index={index} isGlobalSelected={isGlobalSelected} />} />}
+                <Checkbox />
+                {<Pagination items={skills} itemsPerPage={30} itemRender={(item, index) => <Skill skill={item} index={index} />} />}
             </div>
         </div>
     );

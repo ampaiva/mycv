@@ -9,7 +9,7 @@ import Objective from './parser/objective';
 import Skills from './parser/skills';
 import Experiences from './parser/experiences';
 import Educations from './parser/education';
-import { LabelsProvider } from './state/LabelsContext';
+import { GlobalContextProvider } from './state/GlobalContext';
 
 import './CV.css';
 
@@ -24,7 +24,7 @@ const CV = () => {
   }, []);
 
   return (
-    <LabelsProvider>
+    <GlobalContextProvider>
       <div className="container">
         <table>
           <tbody>
@@ -73,7 +73,7 @@ const CV = () => {
           </tbody>
         </table>
       </div>
-    </LabelsProvider>
+    </GlobalContextProvider>
   );
 };
 

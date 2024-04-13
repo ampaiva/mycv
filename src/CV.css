@@ -88,14 +88,6 @@
   border-radius: 5px;
 }
 
-.selected {
-  border: solid blue;
-}
-
-.unselected {
-  border: solid transparent;
-}
-
 .experience .roles {
   font-size: large;
 }

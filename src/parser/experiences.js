@@ -5,7 +5,7 @@ import { FaQuestionCircle } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import Session from './session'
 import Pagination from './pagination';
-import { useLabels } from '../state/LabelsContext';
+import { useGlobalContext } from '../state/GlobalContext';
 
 const toHTML = (text) => {
     // Regular expression to match Markdown links
@@ -18,9 +18,9 @@ const toHTML = (text) => {
 }
 
 function Visible({ activity, index }) {
-    const { labelStates } = useLabels();
+    const { globalContext } = useGlobalContext();
 
-    const visible = activity?.tags ? activity?.tags.some(tag => labelStates[tag.toLowerCase()]) : true;
+    const visible = activity?.tags ? activity?.tags.some(tag => globalContext["labelSelected"][tag.toLowerCase()]) : true;
 
     return <div>{visible && (<li key={index} dangerouslySetInnerHTML={{ __html: toHTML(activity?.description ?? activity) }} />)}</div>;
 }
