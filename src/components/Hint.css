@@ -1,0 +1,22 @@
+.hint {
+    position: relative;
+    /* Ensures z-index works */
+}
+
+.hint .icon {
+    margin-left: 10px;
+    display: inline-block;
+    cursor: pointer;
+}
+
+.box {
+    position: absolute;
+
+    font-style: italic;
+    font-size: small;
+    padding: 10px;
+    border-color: #070404;
+    border-radius: 5px;
+    background-color: var(--primary-color);
+    z-index: 999;
+}
