@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import ReactDOM from 'react-dom';
 import { FaQuestionCircle } from "react-icons/fa";
-import { toHTML } from '../parser/experiences';
+import { toHTML } from './toHTML';
 
 import './Hint.css';
 

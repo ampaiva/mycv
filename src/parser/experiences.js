@@ -7,16 +7,7 @@ import Pagination from './pagination';
 import { useGlobalContext } from '../state/GlobalContext';
 import { Hint } from '../components/Hint';
 import { Roles } from '../components/Roles';
-
-export const toHTML = (text) => {
-    // Regular expression to match Markdown links
-    const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
-
-    // Replace Markdown links with HTML links
-    const htmlText = text.replace(linkRegex, '<a href="$2" target="_blank">$1</a>');
-
-    return htmlText;
-}
+import { toHTML } from '../components/toHTML';
 
 function Visible({ activity, index }) {
     const { globalContext } = useGlobalContext();
