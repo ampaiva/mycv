@@ -1,6 +1,6 @@
 
 
-import React, { useState } from 'react';
+import React from 'react';
 import { IoIosSchool } from "react-icons/io";
 import Session from './session'
 import Pagination from './pagination';
@@ -37,7 +37,6 @@ function Activities({ activities }) {
 
 
 function Education({ education }) {
-    const [isHovered, setIsHovered] = useState(false);
 
     return education.activities && (
         <div className="education">

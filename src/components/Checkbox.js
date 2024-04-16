@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React from 'react';
 import { FaCheck } from "react-icons/fa";
 import { RiCheckboxMultipleFill } from "react-icons/ri";
 import { GrMultiple } from "react-icons/gr";
