@@ -3,7 +3,6 @@
 import React, { useState, useEffect } from 'react';
 import { FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
-import Header from './parser/Header';
 import Objective from './parser/objective';
 import Skills from './parser/skills';
 import Experiences from './parser/experiences';
@@ -34,7 +33,6 @@ const CV = () => {
                   <tbody>
                     <tr className='toppage'>
                     </tr>
-                    {/* <Header header={data?.header}/> */}
                     <tr className='name'>
                       {data && (<td>{data?.header?.name}</td>)}
                     </tr>

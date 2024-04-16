@@ -43,7 +43,7 @@ function Skills({ skills }) {
             <div className="title">
                 <div className="column"><div className="icon"><GiSkills /></div></div>
                 <div className="column"><div className="text">Skills</div></div>
-                <div classNLabelsProviderame="column"><div className="filler"></div></div>
+                <div className="column"><div className="filler"></div></div>
             </div>
             <div className="contents">
                 <Checkbox />

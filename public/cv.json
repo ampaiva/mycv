@@ -167,8 +167,11 @@
     ],
     "education": [
         {
-            "school": "Universidade Federal de Minas Gerais",
-            "degree": [
+            "company": {
+                "name": "UFMG",
+                "hint": "[Universidade Federal de Minas Gerais](https://ufmg.br/)"
+            },
+            "roles": [
                 "Master's Degree",
                 "Computer Science"
             ],
@@ -179,8 +182,11 @@
             ]
         },
         {
-            "school": "Universidade Federal de Minas Gerais",
-            "degree": [
+            "company": {
+                "name": "UFMG",
+                "hint": "[Universidade Federal de Minas Gerais](https://ufmg.br/)"
+            },
+            "roles": [
                 "Bacharelor",
                 "Electrical Engineer"
             ],

@@ -6,6 +6,7 @@ import Session from './session'
 import Pagination from './pagination';
 import { useGlobalContext } from '../state/GlobalContext';
 import { Hint } from '../components/Hint';
+import { Roles } from '../components/Roles';
 
 export const toHTML = (text) => {
     // Regular expression to match Markdown links
@@ -48,27 +49,15 @@ function Activities({ activities }) {
     );
 }
 
-function Roles({ roles }) {
-    return (
-        <div className="roles">
-            {roles.join(' | ')}
-        </div>
-    );
-}
-
 function Experience({ experience }) {
-    const [isHovered, setIsHovered] = useState(false);
 
     return (
         <div className="experience">
             <Roles roles={experience.roles} />
-            <div className="container">
-                {isHovered && <div className="box" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)} dangerouslySetInnerHTML={{ __html: toHTML(experience.company.description) }} />}
-            </div>
             <div className="company-period">
-                <div class="column"><div className="company">{experience.company.name}</div></div>
-                <div class="column"><div className="period">{`${experience.start} - ${experience.end}`}</div></div>
-                <div class="column"><Hint hint={experience.company.hint} /></div>
+                <div className="column"><div className="company">{experience.company.name}</div></div>
+                <div className="column"><div className="period">{`${experience.start} - ${experience.end}`}</div></div>
+                <div className="column"><Hint hint={experience.company.hint} /></div>
             </div>
             <Activities activities={experience.activities} />
         </div>
