@@ -5,6 +5,8 @@ import Pagination from './pagination';
 import { useGlobalContext } from '../state/GlobalContext';
 import Checkbox from '../components/Checkbox';
 
+import './Skills.css'
+
 function Skill({ skill, index }) {
     const { globalContext, setGlobalContext } = useGlobalContext();
     const tag = skill[0].toLowerCase();
