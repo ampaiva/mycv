@@ -5,7 +5,7 @@ import { GrMultiple } from "react-icons/gr";
 import { useGlobalContext } from '../state/GlobalContext';
 
 
-import './checkbox.css'
+import './Checkbox.css'
 
 function Checkbox() {
   const { globalContext, setGlobalContext } = useGlobalContext();

@@ -3,7 +3,7 @@ import React from 'react';
 import { GiSkills } from "react-icons/gi";
 import Pagination from './pagination';
 import { useGlobalContext } from '../state/GlobalContext';
-import Checkbox from '../components/checkbox';
+import Checkbox from '../components/Checkbox';
 
 function Skill({ skill, index }) {
     const { globalContext, setGlobalContext } = useGlobalContext();
