@@ -1,7 +1,7 @@
 
 
 import React, { useState } from 'react';
-import { MdWork } from "react-icons/md";
+import { IoIosSchool } from "react-icons/io";
 import Session from './session'
 import Pagination from './pagination';
 
@@ -55,7 +55,7 @@ function Educations({ educations }) {
     const contents = <Pagination items={educations} itemsPerPage={3} itemRender={(item) => <Education education={item} />}/>; 
 
     return (
-        <Session icon={MdWork} text="Education" contents={contents} />
+        <Session icon={IoIosSchool} text="Education" contents={contents} />
     );
 }
 
