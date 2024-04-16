@@ -4,7 +4,13 @@
         "roles": [
             "Engineering Manager",
             "Senior Backend Engineer"
-        ]
+        ],
+        "email": "ampaiva@gmail.com",
+        "phone": "+5531988122060",
+        "location": {
+            "geo": "-19.4583,-44.2412?q=Sete%20Lagoas,%20MG,%20Brazil",
+            "display": "Brazil"
+        }
     },
     "objective": "To leverage my skills and contribute effectively to a dynamic organization, where I can continuously enhance my abilities, collaborate with a diverse team, and drive impactful results.",
     "skills": [
@@ -57,7 +63,7 @@
         {
             "company": {
                 "name": "Loadsmart",
-                "description": "[Loadsmart](https://loadsmart.com) is a startup founded in 2014 and based in Chicago. They provide logistic services for the US and Canadian markets acting as a broker, connecting shippers with carriers. Loadsmart also has a division that provides SaaS for the logistics industry."
+                "hint": "[Loadsmart](https://loadsmart.com) is a startup founded in 2014 and based in Chicago. They provide logistic services for the US and Canadian markets acting as a broker, connecting shippers with carriers. Loadsmart also has a division that provides SaaS for the logistics industry."
             },
             "start": "10/2019",
             "end": "04/2023 (4y 3m)",

@@ -3,8 +3,7 @@
 import React, { useState, useEffect } from 'react';
 import { FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
-
-
+import Header from './parser/Header';
 import Objective from './parser/objective';
 import Skills from './parser/skills';
 import Experiences from './parser/experiences';
@@ -35,20 +34,21 @@ const CV = () => {
                   <tbody>
                     <tr className='toppage'>
                     </tr>
+                    {/* <Header header={data?.header}/> */}
                     <tr className='name'>
                       {data && (<td>{data?.header?.name}</td>)}
                     </tr>
                     <tr className='role'>
-                      {data && (<td>{data.header.roles.join(' | ')}</td>)}
+                      {data && (<td>{data?.header?.roles.join(' | ')}</td>)}
                     </tr>
                     <tr className='contact'>
                       <td>
                         <table>
                           <tbody>
                             <tr>
-                              <td><FaEnvelope /><a href="mailto:ampaiva@gmail.com"> ampaiva@gmail.com</a></td>
-                              <td><FaWhatsapp /><a href="tel:+5531988122060"> +5531988122060</a></td>
-                              <td><FaLocationDot /><a href="geo:-19.4583,-44.2412?q=Sete%20Lagoas,%20MG,%20Brazil"> Brazil</a></td>
+                              <td><FaEnvelope /> <a href={"mailto:" + data?.header?.email}>{" " + data?.header?.email}</a></td>
+                              <td><FaWhatsapp /> <a href={"tel:+5531988122060" + data?.header?.phone}>{data?.header?.phone}</a></td>
+                              <td><FaLocationDot /> <a href={"geo:" + data?.header?.location?.geo}>{data?.header?.location?.display}</a></td>
                             </tr>
                           </tbody>
                         </table>
@@ -60,7 +60,7 @@ const CV = () => {
                           <Objective objective={data?.objective} />
                           <Skills skills={data?.skills} />
                           <Experiences experiences={data?.experiences} />
-                          <Educations educations={data?.education} /> 
+                          <Educations educations={data?.education} />
                         </div>
                       </td>
                     </tr>

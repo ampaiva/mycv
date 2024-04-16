@@ -4,6 +4,7 @@ import React from 'react';
 import { IoIosSchool } from "react-icons/io";
 import Session from './session'
 import Pagination from './pagination';
+import Hint from '../components/Hint'
 
 const toHTML = (text) => {
     // Regular expression to match Markdown links
@@ -45,7 +46,7 @@ function Education({ education }) {
                 <div class="column"><div className="school">{education.school}</div></div>
                {education.start && <div class="column"><div className="period">{`${education.start} - ${education.end}`}</div></div>}
             </div>
-            <Activities activities={education.activities} />
+            <Hint hint={education.activities[0]} />
         </div>
     );
 }

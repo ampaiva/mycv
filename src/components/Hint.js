@@ -37,3 +37,5 @@ export function Hint({ hint }) {
         </>
         ));
 }
+
+export default Hint;

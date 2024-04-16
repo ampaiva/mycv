@@ -1,0 +1,34 @@
+import React from 'react';
+import { FaEnvelope, FaWhatsapp } from "react-icons/fa";
+import { FaLocationDot } from "react-icons/fa6";
+
+function Header({ header }) {
+    return header && (<div>
+        <table>
+            <tbody>
+                <tr className='name'>
+                    {data && (<td>{header?.name}</td>)}
+                </tr>
+                <tr className='role'>
+                    {data && (<td>{header?.roles.join(' | ')}</td>)}
+                </tr>
+                <tr className='contact'>
+                    <td>
+                        <table>
+                            <tbody>
+                                <tr>
+                                    <td><FaEnvelope /> <a href={"mailto:" + header?.email}>{" " + header?.email}</a></td>
+                                    <td><FaWhatsapp /> <a href={"tel:+5531988122060" + header?.phone}>{header?.phone}</a></td>
+                                    <td><FaLocationDot /> <a href={"geo:" + header?.location?.geo}>{header?.location?.display}</a></td>
+                                </tr>
+                            </tbody>
+                        </table>
+                    </td>
+                </tr>
+            </tbody>
+        </table>
+    </div>);
+}
+
+
+export default Header;

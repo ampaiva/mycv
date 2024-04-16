@@ -68,7 +68,7 @@ function Experience({ experience }) {
             <div className="company-period">
                 <div class="column"><div className="company">{experience.company.name}</div></div>
                 <div class="column"><div className="period">{`${experience.start} - ${experience.end}`}</div></div>
-                <div class="column"><Hint hint={experience.company.description} /></div>
+                <div class="column"><Hint hint={experience.company.hint} /></div>
             </div>
             <Activities activities={experience.activities} />
         </div>
