@@ -45,19 +45,6 @@ function Experience({ experience }) {
     );
 }
 
-function Education({ education }) {
-
-    return education.activities && (
-        <div className="experience">
-            <Roles roles={education?.degree} />
-            <div className="company-period">
-                <div className="column"><div className="school">{education.school}</div></div>
-               {education.start && <div className="column"><div className="period">{`${education.start} - ${education.end}`}</div></div>}
-            </div>
-            <Activities activities={education.activities} />
-        </div>
-    );
-}
 
 function Educations({ educations }) {
     const contents = <Pagination items={educations} itemsPerPage={3} itemRender={(item) => <Experience experience={item} />}/>; 
