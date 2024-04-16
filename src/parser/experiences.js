@@ -1,25 +1,13 @@
 
 
-import React, { useState } from 'react';
+import React from 'react';
 import { MdWork } from "react-icons/md";
 import Session from './session'
 import Pagination from './pagination';
-import { useGlobalContext } from '../state/GlobalContext';
 import { Hint } from '../components/Hint';
 import { Roles } from '../components/Roles';
-import { toHTML } from '../components/toHTML';
+import { Visible } from '../components/Visible'
 
-function Visible({ activity, index }) {
-    const { globalContext } = useGlobalContext();
-
-    const visible = activity?.tags ? activity?.tags.some(tag => globalContext["labelSelected"][tag.toLowerCase()]) : true;
-
-    return <div>{visible &&
-        (
-            <li key={index} dangerouslySetInnerHTML={{ __html: toHTML(activity?.description ?? activity) }} />
-        )}
-    </div>;
-}
 
 function Activity({ activity, index }) {
     return (
