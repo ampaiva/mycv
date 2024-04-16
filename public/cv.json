@@ -57,7 +57,7 @@
         {
             "company": {
                 "name": "Loadsmart",
-                "description": "Loadsmart is a startup founded in 2014 and based in Chicago. They provide logistic services for the US and Canadian markets acting as a broker, connecting shippers with carriers. Loadsmart also has a division that provides SaaS for the logistics industry."
+                "description": "[Loadsmart](https://loadsmart.com) is a startup founded in 2014 and based in Chicago. They provide logistic services for the US and Canadian markets acting as a broker, connecting shippers with carriers. Loadsmart also has a division that provides SaaS for the logistics industry."
             },
             "start": "10/2019",
             "end": "04/2023 (4y 3m)",
@@ -68,15 +68,25 @@
             ],
             "activities": [
                 {
-                    "description": "Managed 17 developers with ~90% of retention",
+                    "title": "People Management",
+                    "description": "Managed two teams simultaneously. Mentored individual contributors daily and regular 1:1s, providing positive and growth feedback regularly. Delivered performance reviews two times per year for each direct report. Properly allocated people on the right projects and roles to create evidence for promotion and merit increase.",
                     "tags": [
                         "engineering management"
-                    ]
-                },
-                {
-                    "description": "Promoted 8 direct reports, including the first company Staff Engineer",
-                    "tags": [
-                        "engineering management"
+                    ],
+                    "activities": [
+                        {
+                            "description": "Managed 17 developers with ~90% of retention",
+                            "tags": [
+                                "engineering management"
+                            ]
+                        },
+                        {
+                            "description": "Promoted 8 direct reports, including the first company Staff Engineer",
+                            "tags": [
+                                "engineering management"
+                            ],
+                            "hint": "Mentored individual contributors daily and regular 1:1s, providing positive and growth feedback regularly. Delivered performance reviews two times per year for each direct report. Properly allocated people on the right projects and roles to create evidence for promotion and merit increase."
+                        }
                     ]
                 }
             ]

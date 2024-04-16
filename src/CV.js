@@ -60,7 +60,7 @@ const CV = () => {
                           <Objective objective={data?.objective} />
                           <Skills skills={data?.skills} />
                           <Experiences experiences={data?.experiences} />
-                          <Educations educations={data?.education} />
+                          <Educations educations={data?.education} /> 
                         </div>
                       </td>
                     </tr>

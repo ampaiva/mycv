@@ -1,14 +1,21 @@
+
+:root {
+  --primary-color: #f5bb1b; /* Define the constant */
+}
+
 .menu {
   display: none;
 }
 
 .container {
   font-family: Impact, Haettenschweiler, 'Franklin Gothic Bold', Charcoal, 'Helvetica Inserat', 'Bitstream Vera Sans Bold', 'Arial Black', 'sans serif';
+  position: relative; /* Ensures z-index works */
+  z-index: 100; /* Lower than the floating box */
 }
 
 .container .toppage td {
   padding-top: 70px;
-  background-color: #f5bb1b;
+  background-color: var(--primary-color);
 }
 
 .container .name {
@@ -19,7 +26,7 @@
 .container .role {
   text-align: center;
   font-size: medium;
-  color: #f5bb1b;
+  color: var(--primary-color);
 }
 
 .container .contact table {
@@ -40,7 +47,7 @@
 }
 
 .container .body .section .title {
-  color: #f5bb1b;
+  color: var(--primary-color);
   font-size: larger;
   display: grid;
   grid-template-columns: min-content min-content 1fr;
@@ -84,7 +91,7 @@
 
 .skill-bar {
   height: 100%;
-  background-color: #f5bb1b;
+  background-color: var(--primary-color);
   border-radius: 5px;
 }
 
@@ -101,18 +108,31 @@
   margin-left: 10px;
 }
 
-.experience .container .box {
-  font-style: italic;
-  font-size: small;
-  margin-left: 10px;
-  border-color: #000000;
-  border-width: 20px;
-  border-radius: 5px;
-  background-color: #f5bb1b;
+.hint {
+  position: relative; /* Ensures z-index works */
 }
 
+.hint .icon {
+  margin-left: 10px;
+  display: inline-block;
+  cursor: pointer;
+}
+
+.box {
+  position: absolute;
+
+  font-style: italic;
+  font-size: small;
+  padding: 10px;
+  border-color: #000000;
+  border-radius: 5px;
+  background-color: var(--primary-color);
+  z-index: 999; 
+}
+
+
 .experience .company-period .company, .school-period .school {
-  color: #f5bb1b;
+  color: var(--primary-color);
   font-size: medium;
   text-transform: uppercase;
   margin-left: 0px;
@@ -135,12 +155,12 @@
   display: inline-block;
   width: 10px;
   height: 10px;
-  background-color: #f5bb1b;
+  background-color: var(--primary-color);
   margin-right: 10px;
 }
 
 .pagination {
-  background-color:  #f5bb1b;
+  background-color:  var(--primary-color);
   display: flex;
   justify-content: space-between;
   border-color: #000000;

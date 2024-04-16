@@ -1,13 +1,13 @@
 
 
 import React, { useState } from 'react';
-import { FaQuestionCircle } from "react-icons/fa";
 import { MdWork } from "react-icons/md";
 import Session from './session'
 import Pagination from './pagination';
 import { useGlobalContext } from '../state/GlobalContext';
+import { Hint } from '../components/Hint';
 
-const toHTML = (text) => {
+export const toHTML = (text) => {
     // Regular expression to match Markdown links
     const linkRegex = /\[([^\]]+)\]\(([^)]+)\)/g;
 
@@ -22,7 +22,11 @@ function Visible({ activity, index }) {
 
     const visible = activity?.tags ? activity?.tags.some(tag => globalContext["labelSelected"][tag.toLowerCase()]) : true;
 
-    return <div>{visible && (<li key={index} dangerouslySetInnerHTML={{ __html: toHTML(activity?.description ?? activity) }} />)}</div>;
+    return <div>{visible &&
+        (
+            <li key={index} dangerouslySetInnerHTML={{ __html: toHTML(activity?.description ?? activity) }} />
+        )}
+    </div>;
 }
 
 function Activity({ activity, index }) {
@@ -34,13 +38,13 @@ function Activity({ activity, index }) {
 
 function Activities({ activities }) {
     return (
-            <div className="activities">
-                <ul className="list">
-                    {activities.map((activity, index) => (
-                        <Activity activity={activity} index={index} />
-                    ))}
-                </ul>
-            </div>
+        <div className="activities">
+            <ul className="list">
+                {activities.map((activity, index) => (
+                    <Activity activity={activity} index={index} />
+                ))}
+            </ul>
+        </div>
     );
 }
 
@@ -64,7 +68,7 @@ function Experience({ experience }) {
             <div className="company-period">
                 <div class="column"><div className="company">{experience.company.name}</div></div>
                 <div class="column"><div className="period">{`${experience.start} - ${experience.end}`}</div></div>
-                <div class="column"><div class="icon" onMouseEnter={() => setIsHovered(true)} onMouseLeave={() => setIsHovered(false)}><FaQuestionCircle /></div></div>
+                <div class="column"><Hint hint={experience.company.description} /></div>
             </div>
             <Activities activities={experience.activities} />
         </div>
