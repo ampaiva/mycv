@@ -1,18 +1,13 @@
 
 import React from 'react';
 import { useGlobalContext } from '../state/GlobalContext';
-import { toHTML } from '../components/toHTML';
 
-export function Visible({ activity, index }) {
+export function Visible({ tags, contents }) {
     const { globalContext } = useGlobalContext();
 
-    const visible = activity?.tags ? activity?.tags.some(tag => globalContext["labelSelected"][tag.toLowerCase()]) : true;
+    const visible = tags ? tags.some(tag => globalContext["labelSelected"][tag.toLowerCase()]) : true;
 
-    return <div>{visible &&
-        (
-            <li key={index} dangerouslySetInnerHTML={{ __html: toHTML(activity?.description ?? activity) }} />
-        )}
-    </div>;
+    return <div>{visible && contents}</div>;
 }
 
 export default Visible;
