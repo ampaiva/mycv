@@ -1,39 +1,32 @@
-import React, { useState } from 'react';
-import ReactDOM from 'react-dom';
+import React from 'react';
 import { FaQuestionCircle } from "react-icons/fa";
+import { SlClose } from "react-icons/sl";
+
 import { toHTML } from './toHTML';
 
 import './Hint.css';
 
-export function Hint({ hint }) {
-    const [isHovered, setIsHovered] = useState(false);
-    const [position, setPosition] = useState({ x: 0, y: 0 });
+export function HintIcon({ isVisible, setIsVisible }) {
 
-    const updatePosition = (event) => {
-        setPosition({ x: event.clientX, y: event.clientY });
-        console.log(position);
+    const toggle = () => {
+        setIsVisible(prevState => !prevState);
     };
 
-    const mouseEnter = (event) => {
-        setIsHovered(true);
-    };
+    const icon = isVisible ? <SlClose /> : <FaQuestionCircle />;
 
-    const mouseLeave = () => {
-        setIsHovered(false);
-    };
+    return (
+        <div className="hint">
+            <div className="icon" onClick={toggle}>{icon}</div>
+        </div>
+    );
+}
 
-    return (hint &&
+
+export function Hint({ hint, isVisible }) {
+ 
+    return (hint && isVisible &&
         (<>
-            <div className="hint">
-                <div onMouseMove={updatePosition}>
-                    <div className="icon" onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}><FaQuestionCircle /></div>
-                </div>
-            </div>
-            {isHovered && ReactDOM.createPortal(
-                <div className="box" style={{ top: position.y, left: position.x }}
-                    onMouseEnter={mouseEnter} onMouseLeave={mouseLeave}
-                    dangerouslySetInnerHTML={{ __html: toHTML(hint) }} />,
-                document.body)}
+            <div className="box" dangerouslySetInnerHTML={{ __html: toHTML(hint) }} />
         </>
         ));
 }

@@ -1,10 +1,10 @@
 
 
-import React from 'react';
+import React, {useState} from 'react';
 import { MdWork } from "react-icons/md";
 import Session from './session'
 import Pagination from './pagination';
-import { Hint } from '../components/Hint';
+import { Hint, HintIcon } from '../components/Hint';
 import { Roles } from '../components/Roles';
 import { Visible } from '../components/Visible'
 import { toHTML } from '../components/toHTML';
@@ -29,6 +29,7 @@ function Text({ className, text }) {
         <Visible tags={text.tags} contents={contents} />
     );
 }
+
 function Activities({ activities }) {
     return (
         <div className="activities">
@@ -50,15 +51,15 @@ const functionMap = {
 function Paragraph({ paragraph }) {
 
     const generatedKey = Object.keys(paragraph)
-    .map(
-        (key) => functionMap[key] ? 
-            functionMap[key](paragraph[key]) :
-            (<Text className={key} text={paragraph[key]}/>)
-    );
+        .map(
+            (key) => functionMap[key] ?
+                functionMap[key](paragraph[key]) :
+                (<Text className={key} text={paragraph[key]} />)
+        );
     console.log(generatedKey);
     const contents = (
         <>
-        {generatedKey}
+            {generatedKey}
         </>
     );
 
@@ -71,14 +72,15 @@ function Paragraph({ paragraph }) {
 function Paragraphs({ paragraphs }) {
     return (
         <div className="paragraphs">
-                {paragraphs?.map((activity) => (
-                    <Paragraph paragraph={activity} />
-                ))}
+            {paragraphs?.map((activity) => (
+                <Paragraph paragraph={activity} />
+            ))}
         </div>
     );
 }
 
 function Experience({ experience }) {
+    const [isVisible, setIsVisible] = useState(false);
 
     return (
         <div className="experience">
@@ -86,8 +88,9 @@ function Experience({ experience }) {
             <div className="company-period">
                 <div className="column"><div className="company">{experience.company.name}</div></div>
                 <div className="column"><div className="period">{`${experience.start} - ${experience.end}`}</div></div>
-                <div className="column"><Hint hint={experience.company.hint} /></div>
+                <div className="column"><HintIcon  isVisible={isVisible} setIsVisible={setIsVisible}/></div>
             </div>
+            <Hint hint={experience.company.hint} isVisible={isVisible}/>
             <Paragraphs paragraphs={experience.paragraphs} />
             <Activities activities={experience.activities} />
         </div>
