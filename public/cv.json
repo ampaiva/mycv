@@ -174,9 +174,24 @@
                 "Senior Backend Developer"
             ],
             "activities": [
-                "Development of IT systems focused on telecommunication. The main languages used were C++ and C",
-                "2 months in Naperville-IL (USA) for testing CALEA feature of iGEN, a Lucent Technologies class 5 switch",
-                "8 months in Phoenix-AZ (USA) as a member of the iMerge development team, a Lucent Technologies voice-over IP platform using protocols H.323 and NCS"
+                {
+                    "description": "Development of IT systems focused on telecommunication. The main languages used were C++ and C",
+                    "tags": [
+                        "C++", "C"
+                    ]
+                },
+                {
+                    "description": "2 months in Naperville-IL (USA) for testing CALEA feature of iGEN, a Lucent Technologies class 5 switch",
+                    "tags": [
+                        "C++", "C", "English"
+                    ]
+                },
+                {
+                    "description": "8 months in Phoenix-AZ (USA) as a member of the iMerge development team, a Lucent Technologies voice-over IP platform using protocols H.323 and NCS",
+                    "tags": [
+                        "C++", "C", "English"
+                    ]
+                }
             ]
         }
     ],
@@ -193,7 +208,7 @@
             "start": "2013",
             "end": "2015",
             "activities": [
-                "I propose in my MSc thesis a new method for code clone detection. As proof of concept, I developed a complete [Java system](https://github.com/ampaiva/mcsheep) to parse Java projects in search of code clones."
+                "Proposed a new method for code clone detection. As proof of concept, I developed a complete [Java system](https://github.com/ampaiva/mcsheep) to parse Java projects in search of code clones."
             ]
         },
         {
