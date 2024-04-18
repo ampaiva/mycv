@@ -1,12 +1,7 @@
-// src/CV.js
-
 import React, { useState, useEffect } from 'react';
 import { FaEnvelope, FaWhatsapp } from "react-icons/fa";
 import { FaLocationDot } from "react-icons/fa6";
-import Objective from './parser/objective';
-import Skills from './parser/Skills';
-import Experiences from './parser/experiences';
-import Educations from './parser/education';
+import Paragraphs from './components/Paragraphs';
 import { GlobalContextProvider } from './state/GlobalContext';
 
 import './CV.css';
@@ -55,10 +50,7 @@ const CV = () => {
                     <tr>
                       <td>
                         <div className='body'>
-                          <Objective objective={data?.objective} />
-                          <Skills skills={data?.skills} />
-                          <Experiences experiences={data?.experiences} />
-                          <Educations educations={data?.education} />
+                          <Paragraphs paragraphs={data?.sections} className={"sections"}/>
                         </div>
                       </td>
                     </tr>

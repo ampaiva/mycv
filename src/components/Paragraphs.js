@@ -3,12 +3,8 @@ import { Paragraph } from './Paragraph';
 
 
 
-export function Paragraphs({ paragraphs }) {
-    return (
-        <div className="paragraphs">
-            {paragraphs?.map((activity) => (
-                <Paragraph paragraph={activity} />
-            ))}
-        </div>
-    );
+export function Paragraphs({ paragraphs, className }) {
+    return (<Paragraph className={className} paragraph={paragraphs} />);
 }
+
+export default Paragraphs;

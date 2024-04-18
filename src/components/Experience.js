@@ -1,7 +1,6 @@
 import React, { useState } from 'react';
 import { Hint, HintIcon } from './Hint';
 import { Roles } from './Roles';
-import { Activities } from './Activities';
 import { Paragraphs } from './Paragraphs';
 
 export function Experience({ experience }) {
@@ -16,8 +15,7 @@ export function Experience({ experience }) {
                 <div className="column"><HintIcon isVisible={isVisible} setIsVisible={setIsVisible} /></div>
             </div>
             <Hint hint={experience.company.hint} isVisible={isVisible} />
-            <Paragraphs paragraphs={experience.paragraphs} />
-            <Activities activities={experience.activities} />
+            <Paragraphs paragraphs={experience.paragraphs} className={"paragraphs"}/>
         </div>
     );
 }

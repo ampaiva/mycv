@@ -72,6 +72,10 @@
   border-radius: 5px;
 }
 
+.paragraphs {
+  margin-bottom: 1em;
+}
+
 .subtitle-highlight {
   width: 100%;
   height: 100%;
