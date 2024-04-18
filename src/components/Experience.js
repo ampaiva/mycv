@@ -1,7 +1,8 @@
 import React, { useState } from 'react';
 import { Hint, HintIcon } from './Hint';
 import { Roles } from './Roles';
-import { Paragraphs, Activities } from '../parser/experiences';
+import { Activities } from './Activities';
+import { Paragraphs } from './Paragraphs';
 
 export function Experience({ experience }) {
     const [isVisible, setIsVisible] = useState(false);
