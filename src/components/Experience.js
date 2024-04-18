@@ -12,7 +12,7 @@ export function Experience({ experience }) {
             <Roles roles={experience.roles} />
             <div className="company-period">
                 <div className="column"><div className="company">{experience.company.name}</div></div>
-                <div className="column"><div className="period">{`${experience.start} - ${experience.end}`}</div></div>
+                <div className="column"><div className="period">{experience.start && `${experience.start} - ${experience.end}`}</div></div>
                 <div className="column"><HintIcon isVisible={isVisible} setIsVisible={setIsVisible} /></div>
             </div>
             <Hint hint={experience.company.hint} isVisible={isVisible} />
