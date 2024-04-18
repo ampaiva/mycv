@@ -1,13 +1,12 @@
 
 
-import React, {useState} from 'react';
+import React from 'react';
 import { MdWork } from "react-icons/md";
 import Session from './session'
 import Pagination from './pagination';
-import { Hint, HintIcon } from '../components/Hint';
-import { Roles } from '../components/Roles';
 import { Visible } from '../components/Visible'
 import { toHTML } from '../components/toHTML';
+import { Experience } from '../components/Experience';
 
 
 function Activity({ activity, index }) {
@@ -30,7 +29,7 @@ function Text({ className, text }) {
     );
 }
 
-function Activities({ activities }) {
+export function Activities({ activities }) {
     return (
         <div className="activities">
             <ul className="list">
@@ -69,30 +68,12 @@ function Paragraph({ paragraph }) {
 }
 
 
-function Paragraphs({ paragraphs }) {
+export function Paragraphs({ paragraphs }) {
     return (
         <div className="paragraphs">
             {paragraphs?.map((activity) => (
                 <Paragraph paragraph={activity} />
             ))}
-        </div>
-    );
-}
-
-function Experience({ experience }) {
-    const [isVisible, setIsVisible] = useState(false);
-
-    return (
-        <div className="experience">
-            <Roles roles={experience.roles} />
-            <div className="company-period">
-                <div className="column"><div className="company">{experience.company.name}</div></div>
-                <div className="column"><div className="period">{`${experience.start} - ${experience.end}`}</div></div>
-                <div className="column"><HintIcon  isVisible={isVisible} setIsVisible={setIsVisible}/></div>
-            </div>
-            <Hint hint={experience.company.hint} isVisible={isVisible}/>
-            <Paragraphs paragraphs={experience.paragraphs} />
-            <Activities activities={experience.activities} />
         </div>
     );
 }
