@@ -104,7 +104,8 @@
                             {
                                 "description": "Product features development using Python and Django",
                                 "tags": [
-                                    "python", "django"
+                                    "python",
+                                    "django"
                                 ]
                             },
                             "Product features development using Python and Django",
@@ -252,8 +253,7 @@
                 "roles": [
                     "Bacharelor",
                     "Electrical Engineer"
-                ],
-                "activities": []
+                ]
             }
         ]
     }

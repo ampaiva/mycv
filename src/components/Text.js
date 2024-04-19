@@ -1,6 +1,6 @@
 import React from 'react';
-import { Visible } from '../components/Visible';
-import { toHTML } from '../components/toHTML';
+import { Visible } from './Visible';
+import { toHTML } from './toHTML';
 
 
 

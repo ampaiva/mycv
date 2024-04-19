@@ -1,6 +1,6 @@
 import React from 'react';
 import { Visible } from './Visible';
-import { Text } from '../parser/Text';
+import { Text } from './Text';
 import { functionMap } from './functionMap';
 
 
@@ -23,7 +23,6 @@ export function Paragraph({ className, paragraph, index }) {
     };
 
     const renderList = (_className, array) => {
-        console.log(array);
         const contents = <div className={_className}>
             <ul className='list' >
                 {array.map((item, index) => (
@@ -50,12 +49,12 @@ export function Paragraph({ className, paragraph, index }) {
             renderDiv(_className, array)
     }
 
-    const renderContents = (_className, paragraph, index) => {
-        return Array.isArray(paragraph) ?
-            renderArray(_className, paragraph) :
-            typeof paragraph === 'string' ?
-                renderText(paragraph, _className, index) :
-                renderKeys(paragraph, index);
+    const renderContents = (_className, _paragraph, _index) => {
+        return Array.isArray(_paragraph) ?
+            renderArray(_className, _paragraph) :
+            typeof _paragraph === 'string' ?
+                renderText(_paragraph, _className, _index) :
+                renderKeys(_paragraph, _index);
     }
 
     const contents = renderContents(className, paragraph, index);

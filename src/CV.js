@@ -7,12 +7,12 @@ import { GlobalContextProvider } from './state/GlobalContext';
 import './CV.css';
 
 const CV = () => {
-  const [data, setMarkdown] = useState(null);
+  const [data, setData] = useState(null);
 
   useEffect(() => {
     fetch('/mycv/cv.json')
       .then(response => response.text())
-      .then(text => setMarkdown(JSON.parse(text)))
+      .then(text => setData(JSON.parse(text)))
       .catch(error => console.error('Error fetching CV content:', error));
   }, []);
 
@@ -50,7 +50,7 @@ const CV = () => {
                     <tr>
                       <td>
                         <div className='body'>
-                          <Paragraphs paragraphs={data?.sections} className={"sections"}/>
+                          <Paragraphs paragraphs={data?.sections} className={"sections"} />
                         </div>
                       </td>
                     </tr>
