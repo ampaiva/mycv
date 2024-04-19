@@ -88,7 +88,7 @@
                     {
                         "subtitle-highlight": "Technical Management",
                         "tags": [
-                            "engineering management, python"
+                            "engineering management"
                         ],
                         "activities": [
                             {
@@ -101,6 +101,12 @@
                             "Creation of technical documents related to coding best practices",
                             "Propose and discuss architectural decisions regarding product features",
                             "Code reviews",
+                            {
+                                "description": "Product features development using Python and Django",
+                                "tags": [
+                                    "python", "django"
+                                ]
+                            },
                             "Product features development using Python and Django",
                             "Creation of dashboards for making decisions based on data analysis (SQL)"
                         ],
