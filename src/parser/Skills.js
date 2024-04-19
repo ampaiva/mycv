@@ -28,7 +28,6 @@ function Skill({ skill, index }) {
                 newGlobalContext["labelSelected"][tag] = e.target.checked;
                 newGlobalContext["isGlobalSelected"] = undefined;
                 setGlobalContext(newGlobalContext);
-                console.log(newGlobalContext);
             }} />
             <label>{skill[0]}</label>
             <div className={isSelected ? 'skill selected' : 'skill unselected'}>
