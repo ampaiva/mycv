@@ -88,7 +88,7 @@
                     {
                         "subtitle-highlight": "Technical Management",
                         "tags": [
-                            "engineering management"
+                            "engineering management, python"
                         ],
                         "activities": [
                             {
@@ -139,6 +139,7 @@
                 "roles": [
                     "Senior Backend Developer"
                 ],
+                "paragraph": "Development of IT systems focused on telecommunication and IPTV. The main languages used are Java, C++, and C",
                 "paragraphs": {
                     "activities": [
                         {
@@ -147,7 +148,6 @@
                                 "java"
                             ]
                         },
-                        "Development of IT systems focused on telecommunication and IPTV. The main languages used are Java, C++, and C",
                         {
                             "description": "1 month in New Delhi (India) deploying systems for Ericsson customers",
                             "tags": [

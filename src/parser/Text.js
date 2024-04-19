@@ -4,9 +4,11 @@ import { toHTML } from '../components/toHTML';
 
 
 
-export function Text({ className, text }) {
-    const contents = (
-        <div className={className} dangerouslySetInnerHTML={{ __html: toHTML(text?.description ?? text) }} />
+export function Text({ className, text, index }) {
+    const html = toHTML(text?.description ?? text);
+    const contents = (index !== undefined ? 
+        <li key={index} dangerouslySetInnerHTML={{ __html: html }} /> : 
+        <div className={className} visible="false" dangerouslySetInnerHTML={{ __html: html }}/>
     );
 
     return (
