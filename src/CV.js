@@ -5,6 +5,7 @@ import Paragraphs from './components/Paragraphs';
 import { GlobalContextProvider } from './state/GlobalContext';
 
 import './CV.css';
+import { getRichObject } from './parser/RichObject';
 
 const CV = () => {
   const [data, setData] = useState(null);
@@ -12,7 +13,7 @@ const CV = () => {
   useEffect(() => {
     fetch('/mycv/cv.json')
       .then(response => response.text())
-      .then(text => setData(JSON.parse(text)))
+      .then(text => setData(getRichObject(text)))
       .catch(error => console.error('Error fetching CV content:', error));
   }, []);
 
@@ -49,9 +50,7 @@ const CV = () => {
                     </tr>
                     <tr>
                       <td>
-                        <div className='body'>
-                          <Paragraphs paragraphs={data?.sections} className={"sections"} />
-                        </div>
+                        <Paragraphs paragraphs={data} className={"body"} />
                       </td>
                     </tr>
                   </tbody>
