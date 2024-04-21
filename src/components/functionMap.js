@@ -10,5 +10,6 @@ export const functionMap = {
     "skills": (skills) => <Skills skills={skills} />,
     "experiences": (experiences) => <Experiences experiences={experiences} />,
     "education": (education) => <Educations educations={education} />,
-    "tags": () => (<></>)
+    "tags": () => (<></>),
+    "header": () => (<></>)
 };

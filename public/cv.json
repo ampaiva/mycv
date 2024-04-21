@@ -12,54 +12,54 @@
             "display": "Brazil"
         }
     },
-    "sections": {
-        "objective": "To leverage my skills and contribute effectively to a dynamic organization, where I can continuously enhance my abilities, collaborate with a diverse team, and drive impactful results.",
-        "skills": [
-            [
-                "Engineering Management",
-                85
-            ],
-            [
-                "Team Building",
-                95
-            ],
-            [
-                "Software Development",
-                95
-            ],
-            [
-                "C++",
-                95
-            ],
-            [
-                "Java",
-                98
-            ],
-            [
-                "Python",
-                90
-            ],
-            [
-                "Django",
-                80
-            ],
-            [
-                "Embedded Systems",
-                70
-            ],
-            [
-                "Agile Methodologies",
-                90
-            ],
-            [
-                "Portuguese",
-                100
-            ],
-            [
-                "English",
-                90
-            ]
+    "objective": "To leverage my skills and contribute effectively to a dynamic organization, where I can continuously enhance my abilities, collaborate with a diverse team, and drive impactful results.",
+    "skills": [
+        [
+            "Engineering Management",
+            85
         ],
+        [
+            "Team Building",
+            95
+        ],
+        [
+            "Software Development",
+            95
+        ],
+        [
+            "C++",
+            95
+        ],
+        [
+            "Java",
+            98
+        ],
+        [
+            "Python",
+            90
+        ],
+        [
+            "Django",
+            80
+        ],
+        [
+            "Embedded Systems",
+            70
+        ],
+        [
+            "Agile Methodologies",
+            90
+        ],
+        [
+            "Portuguese",
+            100
+        ],
+        [
+            "English",
+            90
+        ]
+    ],
+"sections": {
         "experiences": [
             {
                 "company": {

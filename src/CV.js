@@ -50,7 +50,9 @@ const CV = () => {
                     </tr>
                     <tr>
                       <td>
-                        <Paragraphs paragraphs={data} className={"body"} />
+                        <div className="body">
+                          <Paragraphs paragraphs={data} className={"sections"} />
+                        </div>
                       </td>
                     </tr>
                   </tbody>
