@@ -19,14 +19,6 @@
             85
         ],
         [
-            "Team Building",
-            95
-        ],
-        [
-            "Software Development",
-            95
-        ],
-        [
             "C++",
             95
         ],
@@ -41,10 +33,6 @@
         [
             "Django",
             80
-        ],
-        [
-            "Embedded Systems",
-            70
         ],
         [
             "Agile Methodologies",
@@ -113,7 +101,8 @@
                         ],
                         "paragraph": "Delivered a custom price ceiling based on industry benchmarks set, assuring that enterprise shippers don’t receive prices above a threshold. This project was published on the [company blog](https://blog.loadsmart.com/2021/10/22/put-bumpers-on-dynamic-pricing-roll-with-adaptive-price-ceiling-guardrails-for-enterprise-shippers) and Linkedin."
                     }
-                ]
+                ],
+                "tags": ["english"]
             },
             {
                 "company": {
@@ -134,7 +123,8 @@
                     "tags": [
                         "java"
                     ]
-                }
+                },
+                "tags": ["english"]
             },
             {
                 "company": {
@@ -175,7 +165,8 @@
                             ]
                         }
                     ]
-                }
+                },
+                "tags": ["english"]
             },
             {
                 "company": {
@@ -213,13 +204,14 @@
                         "Development of IT systems focused on telecommunication. The main languages used were C++ and C",
                         "2 months in Naperville-IL (USA) for testing CALEA feature of iGEN, a Lucent Technologies class 5 switch",
                         "8 months in Phoenix-AZ (USA) as a member of the iMerge development team, a Lucent Technologies voice-over IP platform using protocols H.323 and NCS"
-                    ],
-                    "tags": [
-                        "c++",
-                        "c",
-                        "english"
                     ]
-                }
+                },
+                "tags": [
+                    "c++",
+                    "c",
+                    "english"
+                ]
+
             }
         ],
         "education": [
@@ -240,7 +232,9 @@
                         "description": "Proposed a new method for code clone detection. As proof of concept, I developed a complete [Java system](https://github.com/ampaiva/mcsheep) to parse Java projects in search of code clones.",
                         "tags": [
                             "software engineering",
-                            "java"
+                            "java",
+                            "portuguese",
+                            "english"
                         ]
                     }
                 ]
@@ -256,9 +250,11 @@
                 ],
                 "tags": [
                     "c",
-                    "c++"
+                    "c++",
+                    "portuguese"
                 ]
             }
-        ]
+        ],
+        "tags": ["software development"]
     }
 }
