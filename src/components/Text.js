@@ -11,8 +11,6 @@ export function Text({ className, text, index }) {
         <div className={className} visible="false" dangerouslySetInnerHTML={{ __html: html }}/>
     );
 
-    console.log("Text: ", text);
-
     return (
         <Visible tags={text.tags} contents={contents} />
     );

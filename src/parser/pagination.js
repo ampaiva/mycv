@@ -1,5 +1,6 @@
 import React, { useState, useRef } from 'react';
 import { GrCaretNext, GrCaretPrevious } from "react-icons/gr";
+import { IsVisible } from '../components/Visible';
 
 function Pagination({ items, itemsPerPage, itemRender}) {
     const [currentPage, setCurrentPage] = useState(1);
@@ -10,7 +11,8 @@ function Pagination({ items, itemsPerPage, itemRender}) {
     const startIndex = (currentPage - 1) * itemsPerPage;
     const endIndex = startIndex + itemsPerPage;
 
-    const allItems = items ?? [];
+    // Only consider visible items
+    const allItems = items.filter((item) => IsVisible(item?.tags)) ?? [];
 
     // Get items for the current page
     const currentItems = allItems.slice(startIndex, endIndex);

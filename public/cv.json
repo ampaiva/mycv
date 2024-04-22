@@ -253,6 +253,10 @@
                 "roles": [
                     "Bacharelor",
                     "Electrical Engineer"
+                ],
+                "tags": [
+                    "c",
+                    "c++"
                 ]
             }
         ]

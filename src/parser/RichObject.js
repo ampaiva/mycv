@@ -51,7 +51,7 @@ function mergeChildrenTags(complexJsonObject) {
     complexJsonObject.tags = aggregatedTags;
   }
 
-  printComplexObj(complexJsonObject);
+  // printComplexObj(complexJsonObject);
 
   return complexJsonObject;
 }
