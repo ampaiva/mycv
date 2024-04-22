@@ -1,0 +1,65 @@
+{
+    "header": {
+        "name": "Alexandre Martins Paiva",
+        "roles": [
+            "Engineering Manager",
+            "Senior Backend Engineer"
+        ],
+        "email": "ampaiva@gmail.com",
+        "phone": "+5531988122060",
+        "location": {
+            "geo": "-19.4583,-44.2412?q=Sete%20Lagoas,%20MG,%20Brazil",
+            "display": "Brazil"
+        }
+    },
+    "objective": "To leverage my skills and contribute effectively to a dynamic organization, where I can continuously enhance my abilities, collaborate with a diverse team, and drive impactful results.",
+    "skills": [
+        [
+            "Software Engineering",
+            95
+        ],
+        [
+            "Java",
+            98
+        ],
+        [
+            "C++",
+            98
+        ]
+    ],
+    "sections": {
+        "education": [
+            {
+                "company": {
+                    "name": "UFMG"
+                },
+                "roles": [
+                    "Master's Degree"
+                ],
+                "start": "2013",
+                "end": "2015",
+                "paragraphs": [
+                    {
+                        "subtitle-highlight": "Thesis",
+                        "description": "Proposed a new method for code clone detection. As proof of concept, I developed a complete [Java system](https://github.com/ampaiva/mcsheep) to parse Java projects in search of code clones.",
+                        "tags": [
+                            "software engineering",
+                            "java"
+                        ]
+                    }
+                ]
+            },
+            {
+                "company": {
+                    "name": "UFMG"
+                },
+                "roles": [
+                    "Bacharelor"
+                ],
+                "tags": [
+                    "c++"
+                ]
+            }
+        ]
+    }
+}
