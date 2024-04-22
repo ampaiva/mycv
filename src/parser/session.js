@@ -1,5 +1,10 @@
-function Session({ icon: Icon, text, contents }) {
-  return (
+import { IsVisible } from "../components/Visible";
+
+function Session({ icon: Icon, text, contents, items }) {
+
+  const visibleItems = items ? items.filter((item) => IsVisible(item?.tags)).length > 0 : true;
+
+  const sessionContents =
     <div className="section">
       <table>
         <tbody>
@@ -21,7 +26,10 @@ function Session({ icon: Icon, text, contents }) {
           </tr>
         </tbody>
       </table>
-    </div>
+    </div>;
+
+  return (
+    visibleItems && <>{sessionContents}</>
   );
 }
 

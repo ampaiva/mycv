@@ -11,7 +11,7 @@ function Experiences({ experiences }) {
     const contents = <Pagination items={experiences} itemsPerPage={3} itemRender={(experience) => <Experience experience={experience} />} />;
 
     return (
-        <Session icon={MdWork} text="Experience" contents={contents} />
+        <Session icon={MdWork} text="Experience" contents={contents} items={experiences}/>
     );
 }
 
