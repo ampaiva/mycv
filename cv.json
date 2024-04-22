@@ -35,6 +35,14 @@
             80
         ],
         [
+            "SQL",
+            90
+        ],
+        [
+            "Git",
+            90
+        ],
+        [
             "Agile Methodologies",
             90
         ],
@@ -85,10 +93,30 @@
                                     "agile methodologies"
                                 ]
                             },
-                            "Planned with Product Manager the roadmap, prioritizing the order of the features to be delivered",
-                            "Creation of technical documents related to coding best practices",
-                            "Propose and discuss architectural decisions regarding product features",
-                            "Code reviews",
+                            {
+                                "description": "Planned with Product Manager the roadmap, prioritizing the order of the features to be delivered",
+                                "tags": [
+                                    "engineering management"
+                                ]
+                            },
+                            {
+                                "description": "Created technical documents related to coding best practices",
+                                "tags": [
+                                    "engineering management"
+                                ]
+                            },
+                            {
+                                "description": "Proposed and discussed architectural decisions regarding product features",
+                                "tags": [
+                                    "engineering management"
+                                ]
+                            },
+                            {
+                                "description": "Contributed with effective code reviews",
+                                "tags": [
+                                    "engineering management"
+                                ]
+                            },
                             {
                                 "description": "Product features development using Python and Django",
                                 "tags": [
@@ -96,10 +124,20 @@
                                     "django"
                                 ]
                             },
-                            "Product features development using Python and Django",
-                            "Creation of dashboards for making decisions based on data analysis (SQL)"
+                            {
+                                "description": "Created dashboards for making decisions based on data analysis (SQL)",
+                                "tags": [
+                                    "sql"
+                                ]
+                            }
                         ],
-                        "paragraph": "Delivered a custom price ceiling based on industry benchmarks set, assuring that enterprise shippers don’t receive prices above a threshold. This project was published on the [company blog](https://blog.loadsmart.com/2021/10/22/put-bumpers-on-dynamic-pricing-roll-with-adaptive-price-ceiling-guardrails-for-enterprise-shippers) and Linkedin."
+                        "paragraph": {
+                            "description": "Delivered a custom price ceiling based on industry benchmarks set, assuring that enterprise shippers don’t receive prices above a threshold. This project was published on the [company blog](https://blog.loadsmart.com/2021/10/22/put-bumpers-on-dynamic-pricing-roll-with-adaptive-price-ceiling-guardrails-for-enterprise-shippers) and Linkedin.",
+                            "tags": [
+                                "engineering management"
+                            ]
+                    }
+                        
                     }
                 ],
                 "tags": ["english"]
@@ -116,9 +154,24 @@
                 ],
                 "paragraphs": {
                     "activities": [
-                        "Aurea: Maintenance of Java Systems responsible for exchanging Electronic Data Interchange (EDI)",
-                        "Trilogy: Migration of source code from different Version Control Systems to Github",
-                        "Optiva: Maintenance and development of new features for Optiva Business Support Systems (BSS) solutions Java development for telephony billing. Development using a proprietary language and platform to process billing scenarios for the telecommunications industry"
+                        {
+                            "description": "Aurea: Maintenance of Java Systems responsible for exchanging Electronic Data Interchange (EDI)",
+                            "tags": [
+                                "java"
+                            ]
+                        },
+                        {
+                            "description": "Trilogy: Migration of source code from different Version Control Systems to Github",
+                            "tags": [
+                                "git"
+                            ]
+                        },
+                        {
+                            "description": "Optiva: Maintenance and development of new features for Optiva Business Support Systems (BSS) solutions Java development for telephony billing. Development using a proprietary language and platform to process billing scenarios for the telecommunications industry",
+                            "tags": [
+                                "java"
+                            ]
+                        }
                     ],
                     "tags": [
                         "java"
@@ -149,7 +202,8 @@
                             "description": "1 month in New Delhi (India) deploying systems for Ericsson customers",
                             "tags": [
                                 "java"
-                            ]
+                            ],
+                            "hint": ""
                         },
                         {
                             "description": "1 month in Atlanta-GE (USA) developing solutions for Content Management System (Ericsson)",
@@ -229,7 +283,7 @@
                 "paragraphs": [
                     {
                         "subtitle-highlight": "Thesis",
-                        "description": "Proposed a new method for code clone detection. As proof of concept, I developed a complete [Java system](https://github.com/ampaiva/mcsheep) to parse Java projects in search of code clones.",
+                        "description": "Proposed a new method for code clone detection. As proof of concept, I developed a complete [Java system](https://ampaiva.github.io/mcsheep/) to parse Java projects in search of code clones.",
                         "tags": [
                             "software engineering",
                             "java",
